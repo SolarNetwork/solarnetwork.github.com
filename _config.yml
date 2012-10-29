@@ -1,3 +1,7 @@
 auto: true
 lsi: false
 safe: true
+baseurl: 
+permalink: /:categories/:year-:month/:title.html
+paginate: 15
+

@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
-  padding:50px;
+  margin:20px 50px 50px 50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#666;
   font-weight:300;
@@ -10,7 +10,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin: 14px 0 14px;
+  margin: 0 0 14px;
   font-family: "Source Sans Pro", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight:400;
   clear: both;
@@ -107,6 +107,7 @@ header {
   width:270px;
   float:left;
   position:fixed;
+  margin-top: 34px;
 }
 
 header ul {
@@ -195,16 +196,18 @@ footer {
 
 section.nav {
   padding-bottom:0;
-  margin-bottom: 1em;
+  margin-bottom: 4px;
   border: 0;
 }
 
 section.nav ul {
-  list-style:none;
-  padding:0;
+	display: table;
+	list-style:none;
+	padding:0;
 }
 
 section.nav li {
+	display: table-cell;
   font-weight: 600;
   font-size: 14px;
   margin-right: 20px;
@@ -231,6 +234,11 @@ section.nav li a:hover {
 
 section > img {
   margin: 0 0 14px;
+}
+
+section.post img.leadin {
+	float: left;
+	margin: 0 1em 1em 0;
 }
 
 /* ===================== */
@@ -260,6 +268,7 @@ section > img {
   }
   
   section.nav + section {
+  	padding-top: 0;
     border-top: 0;
   }
   
@@ -297,6 +306,10 @@ section > img {
     padding:15px;
   }
   
+  header {
+  	margin-top: 0;
+  }
+  
   header ul {
     display:none;
   }
@@ -307,5 +320,12 @@ section > img {
     padding:0.4in;
     font-size:12pt;
     color:#444;
+  }
+  header {
+  	margin-top: 0;
+  	margin-bottom: 0.25in;
+  }
+  section.nav {
+  	display: none;
   }
 }

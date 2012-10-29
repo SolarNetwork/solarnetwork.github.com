@@ -1,5 +1,5 @@
 <header>
-	<img alt="SolarNetwork" src="images/logo.svg" width="250" height="35" />
+	<img alt="SolarNetwork" src="{{ site.baseurl }}/images/logo.svg" width="250" height="35" />
 </header>
 <section class="nav heading">
 	<ul>
@@ -7,21 +7,21 @@
 			{% if page.nav-selection == 'home' %}
 			class="active"
 			{% endif %}
-			><a href="index.html">Home</a></li>
+			><a href="{{ site.baseurl }}/index.html">Home</a></li>
 		<li
 			{% if page.nav-selection == 'developers' %}
 			class="active"
 			{% endif %}
-			><a href="developers.html">Developers</a></li>
+			><a href="{{ site.baseurl }}/developers.html">Developers</a></li>
 		<li
 			{% if page.nav-selection == 'enthusiast' %}
 			class="active"
 			{% endif %}
-			><a href="enthusiast.html">Enthusiast</a></li>
+			><a href="{{ site.baseurl }}/enthusiast.html">Enthusiast</a></li>
 		<li
 			{% if page.nav-selection == 'history' %}
 			class="active"
 			{% endif %}
-			><a href="history.html">History</a></li>
+			><a href="{{ site.baseurl }}/history.html">History</a></li>
 	</ul>
 </section>
