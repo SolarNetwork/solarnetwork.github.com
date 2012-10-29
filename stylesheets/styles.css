@@ -1,19 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600);
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
 
 body {
   padding:50px;
   font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
+  color:#666;
   font-weight:300;
 }
 
 h1, h2, h3, h4, h5, h6 {
   color:#222;
-  margin:0 0 20px;
+  margin: 14px 0 14px;
+  font-family: "Source Sans Pro", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight:400;
+  clear: both;
+}
+
+.heading {
+  font-family: "Source Sans Pro", Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+  margin:0 0 14px;
 }
 
 h1, h2, h3 {
@@ -162,7 +170,7 @@ header ul a strong {
 section {
   width:500px;
   float:right;
-  padding-bottom:50px;
+  padding-bottom:28px;
 }
 
 small {
@@ -183,6 +191,46 @@ footer {
   bottom:50px;
 }
 
+/* ===================== */
+
+section.nav {
+  padding-bottom:0;
+  margin-bottom: 1em;
+  border: 0;
+}
+
+section.nav ul {
+  list-style:none;
+  padding:0;
+}
+
+section.nav li {
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 20px;
+  padding: 0px 2px;
+  width:90px;
+  float:left;
+}
+
+section.nav li a {
+  display: block;
+  width: 90px;
+  border-bottom: 2px solid #d2d2d2;
+}
+
+section.nav li.active a {
+	font-weight: 600;
+	color: #666;
+}
+
+section.nav li.active a,
+section.nav li a:hover {
+  border-bottom: 2px solid #f7c819;
+}
+
+/* ===================== */
+
 @media print, screen and (max-width: 960px) {
   
   div.wrapper {
@@ -202,9 +250,13 @@ footer {
   
   section {
     border:1px solid #e5e5e5;
-    border-width:1px 0;
+    border-width: 1px 0 0 0;
     padding:20px 0;
-    margin:0 0 20px;
+    margin: 0;
+  }
+  
+  section.nav + section {
+    border-top: 0;
   }
   
   header a small {

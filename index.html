@@ -1,46 +1,57 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>SolarNetwork by SolarNetwork</title>
+---
+title: SolarNetwork
+layout: main
+nav-selection: home
+---
+<section>
+	<h1>Energy. For the rest of us.</h1>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-      	<img alt="SolarNetwork" src="images/logo.svg" width="250" height="35" />
-      	<br />
-      	{% include nav.html %}
-      	{{ site.time | date_to_xmlschema }}
-      </header>
-      <section>
-        <h1>Welcome to SolarNetwork.</h1>
+	<p>SolarNetwork is a framework for collecting and viewing information about 
+	your personal or commercial energy production and consumption. Some applications of this 
+	technology are:</p>
+	
+	<ul>
+		<li>See how much energy you consume over time.</li>
+		<li>Find patterns in the ways you use energy, and then find ways to minimize your energy footprint.</li>
+		<li>Track how much energy your solar panels produce over time.</li>
+		<li>Compare your energy use (or production) to other people.</li>
+	</ul>
+	
+	<p>SolarNetwork is also a framework for participating in "smart grid" electricity networks.
+	Some applications of this technology are:</p>
+	
+	<ul>
+		<li>Demand response &mdash; automatically adjust your electricity consumption in 
+		response to grid operator requests (and get reimbursed for doing so).</li>
+		
+		<li>Market based pricing &mdash; pay for electricity when you use it (and 
+		intelligently adapt to using electricity when the price is lowest).</li>
+	</ul>
 
-		<p>SolarNetwork is a framework for collecting and viewing information about energy
-		production and consumption. Some applications of this technology are:</p>
-
-		<ul>
-			<li>See how much energy you consume over time.</li>
-			<li>Find patterns in the ways you use energy, and then find ways to minimize your energy footprint.</li>
-			<li>Track how much energy your solar panels produce over time.</li>
-			<li>Compare your energy use (or production) to other people.</li>
-		</ul>
-		
-		
-		
-      </section>
-      <footer>
-      	<p class="view"><a href="https://github.com/SolarNetwork">GitHub Profile</a></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+</section>
+<section>
+	<h2>How it works</h2>
+	
+	<p>SolarNetwork is composed of two parts: a small internet-connected device that
+	you install at home (we like to call them <em>SolarNodes</em>, or <em>nodes</em> for short),
+	and a service "in the cloud" that the devices communicate with (we call this service 
+	<em>SolarNet</em>).</p>
+	
+	<p>Thus, the general idea is that you get your hands on a node,
+	configure it to communicate with your electricity meter, your solar inverter, 
+	your battery charge controller, your weather station, etc, and let the node collect
+	interesting information from those devices and store it in the SolarNet service. From
+	there you have access to pre-built web pages to visualize your energy footprint, 
+	compare your footprint to other users, and look for ways to maximize your energy efficiency.</p>
+	
+	<p>The SolarNet service also provides an easy API for developers or advanced enthusiasts
+	 to build your own applications using the collected data.</p>
+		 
+	</section>
+	<section>
+	<h2>Open to the core</h2>
+	
+	<p>SolarNetwork is built entirely as open source software. We are passionate about
+	open source in general, but believe even more strongly that the software interacting
+	with your home and your energy network should be completely transparent.</p>  
+</section>
