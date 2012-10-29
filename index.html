@@ -16,19 +16,28 @@
     <div class="wrapper">
       <header>
       	<img alt="SolarNetwork" src="images/logo.svg" width="250" height="35" />
-        <p></p>
-
-
-        <p class="view"><a href="https://github.com/SolarNetwork">View My GitHub Profile</a></p>
-
+      	<br />
+      	{% include nav.html %}
+      	{{ site.time | date_to_xmlschema }}
       </header>
       <section>
-        <h3>Welcome to SolarNetwork.</h3>
+        <h1>Welcome to SolarNetwork.</h1>
 
-		<p>This is a placeholder for the SolarNetwork site.</p>
+		<p>SolarNetwork is a framework for collecting and viewing information about energy
+		production and consumption. Some applications of this technology are:</p>
+
+		<ul>
+			<li>See how much energy you consume over time.</li>
+			<li>Find patterns in the ways you use energy, and then find ways to minimize your energy footprint.</li>
+			<li>Track how much energy your solar panels produce over time.</li>
+			<li>Compare your energy use (or production) to other people.</li>
+		</ul>
+		
+		
+		
       </section>
       <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      	<p class="view"><a href="https://github.com/SolarNetwork">GitHub Profile</a></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
