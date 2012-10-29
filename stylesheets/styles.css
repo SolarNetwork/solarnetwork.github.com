@@ -229,6 +229,10 @@ section.nav li a:hover {
   border-bottom: 2px solid #f7c819;
 }
 
+section > img {
+  margin: 0 0 14px;
+}
+
 /* ===================== */
 
 @media print, screen and (max-width: 960px) {
