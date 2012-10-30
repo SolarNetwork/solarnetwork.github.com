@@ -9,6 +9,11 @@
 			{% endif %}
 			><a href="{{ site.baseurl }}/index.html">Home</a></li>
 		<li
+			{% if page.nav-selection == 'news' %}
+			class="active"
+			{% endif %}
+			><a href="{{ site.baseurl }}/news/index.html">News</a></li>
+		<li
 			{% if page.nav-selection == 'developers' %}
 			class="active"
 			{% endif %}

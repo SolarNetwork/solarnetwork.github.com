@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Smartgrids Summit
-tags: event
+tags: event, smartgrid
 ---
 Meet us at the [Smartgrids Summit](http://www.conferenz.co.nz/conferences/smart-grids-summit) 
 in Wellington, NZ - February 23, 2010. We'll be participating in 

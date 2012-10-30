@@ -1,5 +1,12 @@
 ---
 layout: posts
 title: News
+nav-selection: news
 ---
 <p>SolarNetwork in and around a town near you.</p>
+
+<ul class="posts">
+{% for post in site.categories.news posts limit 50 %}
+	{% include post-list-item.html %}
+{% endfor %}
+</ul>
