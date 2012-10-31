@@ -3,5 +3,3 @@ lsi: false
 safe: true
 baseurl: 
 permalink: /:categories/:year-:month/:title.html
-exclude: [google6582db8577ede134.html]
-
