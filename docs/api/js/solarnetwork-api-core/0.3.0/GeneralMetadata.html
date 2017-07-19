@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SolarNetwork Core Class: GeneralMetadata</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">SolarNetwork Core</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Aggregation.html">Aggregation</a></li><li><a href="AuthorizationV2Builder.html">AuthorizationV2Builder</a></li><li><a href="AuthTokenStatus.html">AuthTokenStatus</a></li><li><a href="AuthTokenType.html">AuthTokenType</a></li><li><a href="ComparableEnum.html">ComparableEnum</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="DatumMetadataUrlHelper.html">DatumMetadataUrlHelper</a></li><li><a href="Enum.html">Enum</a></li><li><a href="Environment.html">Environment</a></li><li><a href="GeneralMetadata.html">GeneralMetadata</a></li><li><a href="HttpHeaders.html">HttpHeaders</a></li><li><a href="InstructionState.html">InstructionState</a></li><li><a href="LocationPrecision.html">LocationPrecision</a></li><li><a href="MultiMap.html">MultiMap</a></li><li><a href="NodeDatumUrlHelper.html">NodeDatumUrlHelper</a></li><li><a href="NodeInstructionUrlHelper.html">NodeInstructionUrlHelper</a></li><li><a href="NodeMetadataUrlHelper.html">NodeMetadataUrlHelper</a></li><li><a href="Pagination.html">Pagination</a></li><li><a href="SecurityPolicy.html">SecurityPolicy</a></li><li><a href="SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></li><li><a href="SortDescriptor.html">SortDescriptor</a></li><li><a href="UrlHelper.html">UrlHelper</a></li><li><a href="UserAuthTokenUrlHelper.html">UserAuthTokenUrlHelper</a></li><li><a href="UserMetadataUrlHelper.html">UserMetadataUrlHelper</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="DatumMetadataUrlHelperMixin.html">DatumMetadataUrlHelperMixin</a></li><li><a href="NodeDatumUrlHelperMixin.html">NodeDatumUrlHelperMixin</a></li><li><a href="NodeInstructionUrlHelperMixin.html">NodeInstructionUrlHelperMixin</a></li><li><a href="NodeMetadataUrlHelperMixin.html">NodeMetadataUrlHelperMixin</a></li><li><a href="NodeUrlHelperMixin.html">NodeUrlHelperMixin</a></li><li><a href="QueryUrlHelperMixin.html">QueryUrlHelperMixin</a></li><li><a href="UserAuthTokenUrlHelperMixin.html">UserAuthTokenUrlHelperMixin</a></li><li><a href="UserMetadataUrlHelperMixin.html">UserMetadataUrlHelperMixin</a></li><li><a href="UserUrlHelperMixin.html">UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#Aggregations">Aggregations</a></li><li><a href="global.html#AuthTokenStatuses">AuthTokenStatuses</a></li><li><a href="global.html#AuthTokenTypes">AuthTokenTypes</a></li><li><a href="global.html#dateParser">dateParser</a></li><li><a href="global.html#instructionParameter">instructionParameter</a></li><li><a href="global.html#InstructionStates">InstructionStates</a></li><li><a href="global.html#iso8601Date">iso8601Date</a></li><li><a href="global.html#LocationPrecisions">LocationPrecisions</a></li><li><a href="global.html#objectToStringMap">objectToStringMap</a></li><li><a href="global.html#SolarQueryApiPathV1">SolarQueryApiPathV1</a></li><li><a href="global.html#SolarQueryDefaultPath">SolarQueryDefaultPath</a></li><li><a href="global.html#SolarQueryPathKey">SolarQueryPathKey</a></li><li><a href="global.html#SolarQueryPublicPathKey">SolarQueryPublicPathKey</a></li><li><a href="global.html#SolarUserApiPathV1">SolarUserApiPathV1</a></li><li><a href="global.html#SolarUserDefaultPath">SolarUserDefaultPath</a></li><li><a href="global.html#SolarUserPathKey">SolarUserPathKey</a></li><li><a href="global.html#stringMapToObject">stringMapToObject</a></li><li><a href="global.html#urlQueryEncode">urlQueryEncode</a></li><li><a href="global.html#urlQueryParse">urlQueryParse</a></li><li><a href="global.html#UserIdsKey">UserIdsKey</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: GeneralMetadata</h1>
+<section>
+
+<header>
+    
+        <h2>
+        GeneralMetadata
+        </h2>
+        
+            <div class="class-description"><p>General metadata with a basic structure.</p>
+<p>This metadata can be associated with a variety of objects within SolarNetwork, such
+as users, nodes, and datum.</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="GeneralMetadata"><span class="type-signature"></span>new GeneralMetadata( [info] [, propertyInfo] [, tags])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Constructor.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>info</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map.&lt;string, *></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the general metadata map</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>propertyInfo</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map.&lt;string, Map.&lt;string, *>></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the property metadata map</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>tags</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Set.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the tags</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".fromJsonEncoding"><span class="type-signature">&lt;static> </span>fromJsonEncoding(json)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Parse a JSON string into a <a href="GeneralMetadata.html"><code>GeneralMetadata</code></a> instance.</p>
+<p>The JSON must be encoded the same way <a href="GeneralMetadata.html#toJsonEncoding"><code>GeneralMetadata#toJsonEncoding</code></a> does.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>json</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the JSON to parse</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the metadata instance</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="GeneralMetadata.html">GeneralMetadata</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="toJsonEncoding"><span class="type-signature"></span>toJsonEncoding()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get this object as a standard JSON encoded string value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the JSON encoded string</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a>
+	
+		on 2017-07-19T15:22:42+12:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
