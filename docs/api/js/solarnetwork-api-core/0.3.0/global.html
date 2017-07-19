@@ -1,0 +1,3180 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SolarNetwork Core Global</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">SolarNetwork Core</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Aggregation.html">Aggregation</a></li><li><a href="AuthorizationV2Builder.html">AuthorizationV2Builder</a></li><li><a href="AuthTokenStatus.html">AuthTokenStatus</a></li><li><a href="AuthTokenType.html">AuthTokenType</a></li><li><a href="ComparableEnum.html">ComparableEnum</a></li><li><a href="Configuration.html">Configuration</a></li><li><a href="DatumMetadataUrlHelper.html">DatumMetadataUrlHelper</a></li><li><a href="Enum.html">Enum</a></li><li><a href="Environment.html">Environment</a></li><li><a href="GeneralMetadata.html">GeneralMetadata</a></li><li><a href="HttpHeaders.html">HttpHeaders</a></li><li><a href="InstructionState.html">InstructionState</a></li><li><a href="LocationPrecision.html">LocationPrecision</a></li><li><a href="MultiMap.html">MultiMap</a></li><li><a href="NodeDatumUrlHelper.html">NodeDatumUrlHelper</a></li><li><a href="NodeInstructionUrlHelper.html">NodeInstructionUrlHelper</a></li><li><a href="NodeMetadataUrlHelper.html">NodeMetadataUrlHelper</a></li><li><a href="Pagination.html">Pagination</a></li><li><a href="SecurityPolicy.html">SecurityPolicy</a></li><li><a href="SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></li><li><a href="SortDescriptor.html">SortDescriptor</a></li><li><a href="UrlHelper.html">UrlHelper</a></li><li><a href="UserAuthTokenUrlHelper.html">UserAuthTokenUrlHelper</a></li><li><a href="UserMetadataUrlHelper.html">UserMetadataUrlHelper</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="DatumMetadataUrlHelperMixin.html">DatumMetadataUrlHelperMixin</a></li><li><a href="NodeDatumUrlHelperMixin.html">NodeDatumUrlHelperMixin</a></li><li><a href="NodeInstructionUrlHelperMixin.html">NodeInstructionUrlHelperMixin</a></li><li><a href="NodeMetadataUrlHelperMixin.html">NodeMetadataUrlHelperMixin</a></li><li><a href="NodeUrlHelperMixin.html">NodeUrlHelperMixin</a></li><li><a href="QueryUrlHelperMixin.html">QueryUrlHelperMixin</a></li><li><a href="UserAuthTokenUrlHelperMixin.html">UserAuthTokenUrlHelperMixin</a></li><li><a href="UserMetadataUrlHelperMixin.html">UserMetadataUrlHelperMixin</a></li><li><a href="UserUrlHelperMixin.html">UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#Aggregations">Aggregations</a></li><li><a href="global.html#AuthTokenStatuses">AuthTokenStatuses</a></li><li><a href="global.html#AuthTokenTypes">AuthTokenTypes</a></li><li><a href="global.html#dateParser">dateParser</a></li><li><a href="global.html#instructionParameter">instructionParameter</a></li><li><a href="global.html#InstructionStates">InstructionStates</a></li><li><a href="global.html#iso8601Date">iso8601Date</a></li><li><a href="global.html#LocationPrecisions">LocationPrecisions</a></li><li><a href="global.html#objectToStringMap">objectToStringMap</a></li><li><a href="global.html#SolarQueryApiPathV1">SolarQueryApiPathV1</a></li><li><a href="global.html#SolarQueryDefaultPath">SolarQueryDefaultPath</a></li><li><a href="global.html#SolarQueryPathKey">SolarQueryPathKey</a></li><li><a href="global.html#SolarQueryPublicPathKey">SolarQueryPublicPathKey</a></li><li><a href="global.html#SolarUserApiPathV1">SolarUserApiPathV1</a></li><li><a href="global.html#SolarUserDefaultPath">SolarUserDefaultPath</a></li><li><a href="global.html#SolarUserPathKey">SolarUserPathKey</a></li><li><a href="global.html#stringMapToObject">stringMapToObject</a></li><li><a href="global.html#urlQueryEncode">urlQueryEncode</a></li><li><a href="global.html#urlQueryParse">urlQueryParse</a></li><li><a href="global.html#UserIdsKey">UserIdsKey</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Global</h1>
+<section>
+
+<header>
+    
+        <h2>
+        
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="Aggregations">
+    <h4 id="Aggregations"><span class="type-signature">&lt;constant> </span>Aggregations<span class="type-signature"> :<a href="Aggregation.html">Aggregation</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported Aggregation values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Minute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>minute</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FiveMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>5 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TenMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>10 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FifeteenMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>15 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ThirtyMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>30 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Hour</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an hour</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HourOfDay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an hour of a day, e.g. 1-24</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SeasonalHourOfDay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an hour of a day, further grouped into 4 seasons</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Day</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a day</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DayOfWeek</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a day of the week, e.g. Monday - Sunday</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SeasonalDayOfWeek</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a day of the week, further grouped into 4 seasons</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Week</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a week</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WeekOfYear</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the week within a year, e.g. 1 - 52</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Month</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a month</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RunningTotal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="Aggregation.html">Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a complete running total over a time span</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="AuthTokenStatuses">
+    <h4 id="AuthTokenStatuses"><span class="type-signature">&lt;constant> </span>AuthTokenStatuses<span class="type-signature"> :<a href="AuthTokenStatus.html">AuthTokenStatus</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported AuthTokenStatus values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="AuthTokenStatus.html">AuthTokenStatus</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Active</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="AuthTokenStatus.html">AuthTokenStatus</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the token is active and usable</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Disabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="AuthTokenStatus.html">AuthTokenStatus</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the token is disabled and not usable</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="AuthTokenTypes">
+    <h4 id="AuthTokenTypes"><span class="type-signature">&lt;constant> </span>AuthTokenTypes<span class="type-signature"> :<a href="AuthTokenType.html">AuthTokenType</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported AuthTokenType values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="AuthTokenType.html">AuthTokenType</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ReadNodeData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="AuthTokenType.html">AuthTokenType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a read-only token for reading SolarNode data</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>User</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="AuthTokenType.html">AuthTokenType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>full access as the user that owns the token</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="instructionParameter">
+    <h4 id="instructionParameter"><span class="type-signature">&lt;constant> </span>instructionParameter<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The static <code>NodeInstructionUrlHelperMixin#instructionParameter</code> method so it can be imported directly.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="InstructionStates">
+    <h4 id="InstructionStates"><span class="type-signature">&lt;constant> </span>InstructionStates<span class="type-signature"> :<a href="InstructionState.html">InstructionState</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported InstructionState values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="InstructionState.html">InstructionState</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Unknown</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="InstructionState.html">InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an unknown state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Queued</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="InstructionState.html">InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the instruction has been received by SolarNet but not yet delivered to its destination</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Received</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="InstructionState.html">InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the instruction has been delivered to its destination but not yet acted upon</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Executed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="InstructionState.html">InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the instruction is currently being acted upon</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Declined</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="InstructionState.html">InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the destination has declined to execute the instruction, or the execution failed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Completed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="InstructionState.html">InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the destination has executed successfully</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="LocationPrecisions">
+    <h4 id="LocationPrecisions"><span class="type-signature">&lt;constant> </span>LocationPrecisions<span class="type-signature"> :<a href="LocationPrecision.html">LocationPrecision</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported LocationPrecision values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>LatLong</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>GPS coordinates</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Block</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a city block</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Street</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a street</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PostalCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a postal code (or &quot;zip code&quot;)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Locality</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a town or city</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StateOrProvince</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a state or province</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Region</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a large region</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TimeZone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a time zone</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Country</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="LocationPrecision.html">LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a country</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="SolarQueryApiPathV1">
+    <h4 id="SolarQueryApiPathV1"><span class="type-signature">&lt;constant> </span>SolarQueryApiPathV1<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The SolarQuery REST API path.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="SolarQueryDefaultPath">
+    <h4 id="SolarQueryDefaultPath"><span class="type-signature">&lt;constant> </span>SolarQueryDefaultPath<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The SolarQuery default path.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="SolarQueryPathKey">
+    <h4 id="SolarQueryPathKey"><span class="type-signature">&lt;constant> </span>SolarQueryPathKey<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The <a href="UrlHelper.html"><code>UrlHelper</code></a> parameters key for the SolarQuery path.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="SolarQueryPublicPathKey">
+    <h4 id="SolarQueryPublicPathKey"><span class="type-signature">&lt;constant> </span>SolarQueryPublicPathKey<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The <a href="UrlHelper.html"><code>UrlHelper</code></a> parameters key that holds a <code>boolean</code> flag to
+use the public path scheme (<code>/pub</code>) when constructing URLs.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="SolarUserApiPathV1">
+    <h4 id="SolarUserApiPathV1"><span class="type-signature">&lt;constant> </span>SolarUserApiPathV1<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The SolarUser REST API path.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="SolarUserDefaultPath">
+    <h4 id="SolarUserDefaultPath"><span class="type-signature">&lt;constant> </span>SolarUserDefaultPath<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The SolarUser default path.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="SolarUserPathKey">
+    <h4 id="SolarUserPathKey"><span class="type-signature">&lt;constant> </span>SolarUserPathKey<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The <a href="UrlHelper.html"><code>UrlHelper</code></a> parameters key for the SolarUser path.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="UserIdsKey">
+    <h4 id="UserIdsKey"><span class="type-signature">&lt;constant> </span>UserIdsKey<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The <a href="UrlHelper.html"><code>UrlHelper</code></a> parameters key that holds the <code>userId</code>.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="dateParser"><span class="type-signature"></span>dateParser(str)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Parse a UTC date string, from a variety of supported formats.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the string to parse into a date</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the parsed <code>Date</code>, or <code>null</code> if the date can't be parsed</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Date</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="iso8601Date"><span class="type-signature"></span>iso8601Date(date [, includeTime])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Format a date into an ISO 8601 timestamp or date string, in the UTC time zone.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+        <th>Default</th>
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>date</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>the date to format</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>includeTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> to format as a timestamp, <code>false</code> as just a date</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the formatted date string</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="objectToStringMap"><span class="type-signature"></span>objectToStringMap(obj)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Convert a simple object into a <code>Map</code> instance.</p>
+<p>Property values that are themselves objects will be converted into <code>Map</code>
+instances as well.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a simple object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="global.html#stringMapToObject"><code>stringMapToObject</code></a> for the reverse conversion</li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a Map with string keys; nested Map objects are also handled</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Map.&lt;string, *></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="stringMapToObject"><span class="type-signature"></span>stringMapToObject(strMap)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Convert a <code>Map</code> into a simple object.</p>
+<p>The keys are assumed to be strings. Values that are themselves <code>Map</code> instances
+will be converted to simple objects as well.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>strMap</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map.&lt;string, *></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a Map with string keys; nested Map objects are also handled</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="global.html#objectToStringMap"><code>objectToStringMap</code></a> for the reverse conversion</li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a simple object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="urlQueryEncode"><span class="type-signature"></span>urlQueryEncode(parameters, encoderFn)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Encode the properties of an object as a URL query string.</p>
+<p>If an object property has an array value, multiple URL parameters will be encoded for that property.</p>
+
+<p>The optional <code>encoderFn</code> argument is a function that accepts a string value
+and should return a URI-safe string for that value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>parameters</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an object to encode as URL parameters</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>encoderFn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an optional function to encode each URI component with;
+                            if not provided the built-in encodeURIComponent() function
+                            will be used</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the encoded query parameters</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">String</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="urlQueryParse"><span class="type-signature"></span>urlQueryParse(search)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Parse the query portion of a URL string, and return a parameter object for the
+parsed key/value pairs.</p>
+<p>Multiple parameters of the same name will be stored as an array on the returned object.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>search</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">String</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the query portion of the URL, which may optionally include
+                       the leading '?' character</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the parsed query parameters, as a parameter object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.3</a>
+	
+		on 2017-07-19T15:22:41+12:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
