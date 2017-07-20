@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Mixins</title>
+	<title>SolarNetwork Core Mixin: QueryUrlHelperMixin</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,14 +86,18 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Mixins</h1>
+	<h1 class="page-title">Mixin: QueryUrlHelperMixin</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="module-net.html">net</a>~</span>
         
+        QueryUrlHelperMixin
         </h2>
+        
+            <div class="class-description"><p>A mixin class that adds SolarQuery specific support to <a href="module-net-UrlHelper.html"><code>module:net~UrlHelper</code></a>.</p></div>
         
     
 </header>
@@ -153,126 +157,123 @@
     
 
     
-        <h3 class="subsection-title">Classes</h3>
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
 
         <dl>
-            <dt><a href="module-domain-Aggregation.html">Aggregation</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id="baseUrl"><span class="type-signature"></span>baseUrl()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the base URL to the SolarQuery v1 REST API.</p>
+<p>The returned URL uses the configured environment to resolve
+the <code>hostUrl</code>, the <code>solarQueryPath</code> context path,
+and the <code>publicQuery</code> boolean flag. If the context path is not 
+available, it will default to <code>/solarquery</code>.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the base URL to SolarQuery</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            <dt><a href="module-domain-AuthTokenStatus.html">AuthTokenStatus</a></dt>
-            <dd></dd>
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
         
-            <dt><a href="module-domain-AuthTokenType.html">AuthTokenType</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-DatumFilter.html">DatumFilter</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-GeneralMetadata.html">GeneralMetadata</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-InstructionState.html">InstructionState</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-LocationPrecision.html">LocationPrecision</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-Pagination.html">Pagination</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SecurityPolicy.html">SecurityPolicy</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SortDescriptor.html">SortDescriptor</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-AuthorizationV2Builder.html">AuthorizationV2Builder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-DatumMetadataUrlHelper.html">DatumMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-Environment.html">Environment</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-HttpHeaders.html">HttpHeaders</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeDatumUrlHelper.html">NodeDatumUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeInstructionUrlHelper.html">NodeInstructionUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeMetadataUrlHelper.html">NodeMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UrlHelper.html">UrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserAuthTokenUrlHelper.html">UserAuthTokenUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserMetadataUrlHelper.html">UserMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-ComparableEnum.html">ComparableEnum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-Configuration.html">Configuration</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-Enum.html">Enum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-MultiMap.html">MultiMap</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-PropMap.html">PropMap</a></dt>
-            <dd></dd>
+
+    
+</dd>
+
         </dl>
-    
-
-    
-        <h3 class="subsection-title">Mixins</h3>
-
-        <dl>
-            <dt><a href="module-net-DatumMetadataUrlHelperMixin.html">DatumMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeDatumUrlHelperMixin.html">NodeDatumUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeInstructionUrlHelperMixin.html">NodeInstructionUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeMetadataUrlHelperMixin.html">NodeMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeUrlHelperMixin.html">NodeUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-QueryUrlHelperMixin.html">QueryUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserAuthTokenUrlHelperMixin.html">UserAuthTokenUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserMetadataUrlHelperMixin.html">UserMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserUrlHelperMixin.html">UserUrlHelperMixin</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
     
 
     

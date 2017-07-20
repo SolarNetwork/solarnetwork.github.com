@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Global</title>
+	<title>SolarNetwork Core Class: SecurityPolicy</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,14 +86,19 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Global</h1>
+	<h1 class="page-title">Class: SecurityPolicy</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="module-domain.html">domain</a>~</span>
         
+        SecurityPolicy
         </h2>
+        
+            <div class="class-description"><p>An immutable set of security restrictions that can be attached to other objects, like auth tokens.</p>
+<p>Use the <a href="module-domain-SecurityPolicyBuilder.html"><code>module:domain~SecurityPolicyBuilder</code></a> to create instances of this class with a fluent API.</p></div>
         
     
 </header>
@@ -103,8 +108,337 @@
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="SecurityPolicy"><span class="type-signature"></span>new SecurityPolicy( [nodeIds] [, sourceIds] [, aggregations] [, minAggregation] [, locationPrecisions] [, minLocationPrecision] [, nodeMetadataPaths] [, userMetadataPaths])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Constructor.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
 
         
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>nodeIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;number></span>
+|
+
+<span class="param-type">Set.&lt;number></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the node IDs to restrict to, or <code>null</code> for no restriction</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceIds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+|
+
+<span class="param-type">Set.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the source ID to restrict to, or <code>null</code> for no restriction</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aggregations</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;<a href="module-domain-Aggregation.html">module:domain~Aggregation</a>></span>
+|
+
+<span class="param-type">Set.&lt;<a href="module-domain-Aggregation.html">module:domain~Aggregation</a>></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the aggregation names to restrict to, or <code>null</code> for no restriction</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minAggregation</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>if specified, a minimum aggregation level that is allowed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>locationPrecisions</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Set.&lt;<a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a>></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the location precision names to restrict to, or <code>null</code> for no restriction</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>minLocationPrecision</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>if specified, a minimum location precision that is allowed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>nodeMetadataPaths</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Set.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the <code>SolarNodeMetadata</code> paths to restrict to, or <code>null</code> for no restriction</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>userMetadataPaths</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Set.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the <code>UserNodeMetadata</code> paths to restrict to, or <code>null</code> for no restriction</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -144,7 +478,21 @@
 </dl>
 
 
-        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
     
     </div>
 
@@ -158,6 +506,490 @@
 
     
 
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="aggregations">
+    <h4 id="aggregations"><span class="type-signature"></span>aggregations<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the aggregations.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="locationPrecisions">
+    <h4 id="locationPrecisions"><span class="type-signature"></span>locationPrecisions<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the location precisions.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="minAggregation">
+    <h4 id="minAggregation"><span class="type-signature"></span>minAggregation<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the minimum aggregation.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="minLocationPrecision">
+    <h4 id="minLocationPrecision"><span class="type-signature"></span>minLocationPrecision<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the minimum location precision.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="nodeIds">
+    <h4 id="nodeIds"><span class="type-signature"></span>nodeIds<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the node IDs.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="nodeMetadataPaths">
+    <h4 id="nodeMetadataPaths"><span class="type-signature"></span>nodeMetadataPaths<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the node metadata paths.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="sourceIds">
+    <h4 id="sourceIds"><span class="type-signature"></span>sourceIds<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the source IDs.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="userMetadataPaths">
+    <h4 id="userMetadataPaths"><span class="type-signature"></span>userMetadataPaths<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the user metadata paths.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
     
 
     
@@ -167,7 +999,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="DatumMetadataUrlHelperMixin"><span class="type-signature"></span>DatumMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="toJsonEncoding"><span class="type-signature"></span>toJsonEncoding()</h4>
     
     
 </dt>
@@ -175,7 +1007,7 @@
 
     
     <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
+        <p>Get this object as a standard JSON encoded string value.</p>
     </div>
     
 
@@ -184,56 +1016,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -291,7 +1073,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the JSON encoded string</p>
 </div>
 
 
@@ -302,1223 +1084,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-DatumMetadataUrlHelperMixin.html">module:net~DatumMetadataUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="NodeDatumUrlHelperMixin"><span class="type-signature"></span>NodeDatumUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-NodeDatumUrlHelperMixin.html">module:net~NodeDatumUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="NodeInstructionUrlHelperMixin"><span class="type-signature"></span>NodeInstructionUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a NodeInstructionUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-NodeInstructionUrlHelperMixin.html">module:net~NodeInstructionUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="NodeMetadataUrlHelperMixin"><span class="type-signature"></span>NodeMetadataUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a NodeMetadataUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-NodeMetadataUrlHelperMixin.html">module:net~NodeMetadataUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="NodeUrlHelperMixin"><span class="type-signature"></span>NodeUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a NodeUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-NodeUrlHelperMixin.html">module:net~NodeUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="QueryUrlHelperMixin"><span class="type-signature"></span>QueryUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a QueryUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-QueryUrlHelperMixin.html">module:net~QueryUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="UserAuthTokenUrlHelperMixin"><span class="type-signature"></span>UserAuthTokenUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a UserAuthTokenUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-UserAuthTokenUrlHelperMixin.html">module:net~UserAuthTokenUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="UserMetadataUrlHelperMixin"><span class="type-signature"></span>UserMetadataUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a UserMetadataUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-UserMetadataUrlHelperMixin.html">module:net~UserMetadataUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="UserUrlHelperMixin"><span class="type-signature"></span>UserUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a UserUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-UserUrlHelperMixin.html">module:net~UserUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 

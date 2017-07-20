@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Global</title>
+	<title>SolarNetwork Core Mixin: DatumMetadataUrlHelperMixin</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,14 +86,20 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Global</h1>
+	<h1 class="page-title">Mixin: DatumMetadataUrlHelperMixin</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="module-net.html">net</a>~</span>
         
+        DatumMetadataUrlHelperMixin
         </h2>
+        
+            <div class="class-description"><p>A mixin class that adds SolarNode datum metadata support to <a href="module-net-UrlHelper.html"><code>module:net~UrlHelper</code></a>.</p>
+<p><p>Datum metadata is metadata associated with a specific node and source, i.e. 
+a <code>nodeId</code> and a <code>sourceId</code>.</p></div>
         
     
 </header>
@@ -167,7 +173,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="DatumMetadataUrlHelperMixin"><span class="type-signature"></span>DatumMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="addDatumMetadataUrl"><span class="type-signature"></span>addDatumMetadataUrl( [nodeId] [, sourceId])</h4>
     
     
 </dt>
@@ -175,7 +181,7 @@
 
     
     <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
+        <p>Generate a URL for adding (merging) datum metadata via a <code>POST</code> request.</p>
     </div>
     
 
@@ -198,6 +204,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -210,13 +218,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>nodeId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">number</span>
 
 
 
@@ -224,10 +232,54 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>a specific node ID to use; if not provided the <code>nodeId</code> property of this class will be used</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a specific source ID to use; if not provided the <code>sourceId</code> property of this class will be used</p></td>
         </tr>
 
     
@@ -291,7 +343,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the URL</p>
 </div>
 
 
@@ -302,7 +354,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-DatumMetadataUrlHelperMixin.html">module:net~DatumMetadataUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -319,7 +371,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeDatumUrlHelperMixin"><span class="type-signature"></span>NodeDatumUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="deleteDatumMetadataUrl"><span class="type-signature"></span>deleteDatumMetadataUrl( [nodeId] [, sourceId])</h4>
     
     
 </dt>
@@ -327,7 +379,7 @@
 
     
     <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
+        <p>Generate a URL for deleting datum metadata via a <code>DELETE</code> request.</p>
     </div>
     
 
@@ -350,6 +402,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -362,13 +416,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>nodeId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">number</span>
 
 
 
@@ -376,10 +430,54 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>a specific node ID to use; if not provided the <code>nodeId</code> property of this class will be used</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a specific source ID to use; if not provided the <code>sourceId</code> property of this class will be used</p></td>
         </tr>
 
     
@@ -443,7 +541,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the URL</p>
 </div>
 
 
@@ -454,7 +552,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeDatumUrlHelperMixin.html">module:net~NodeDatumUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -471,7 +569,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeInstructionUrlHelperMixin"><span class="type-signature"></span>NodeInstructionUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="findDatumMetadataUrl"><span class="type-signature"></span>findDatumMetadataUrl( [nodeId] [, sourceId] [, sorts] [, pagination])</h4>
     
     
 </dt>
@@ -479,7 +577,7 @@
 
     
     <div class="description">
-        <p>Create a NodeInstructionUrlHelperMixin class.</p>
+        <p>Generate a URL for searching for datum metadata.</p>
     </div>
     
 
@@ -502,6 +600,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -514,13 +614,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>nodeId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">number</span>
 
 
 
@@ -528,10 +628,124 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>a specific node ID to use; if not provided the <code>nodeId</code> property of this class will be used</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a specific source ID to use; 
+                           if not provided the <code>sourceId</code> property of this class will be used;
+                           if <code>null</code> then ignore any <code>sourceId</code> property of this class</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sorts</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;SortDescriptor></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>optional sort settings to use</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>pagination</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Pagination.html">module:domain~Pagination</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>optional pagination settings to use</p></td>
         </tr>
 
     
@@ -595,7 +809,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the URL</p>
 </div>
 
 
@@ -606,7 +820,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeInstructionUrlHelperMixin.html">module:net~NodeInstructionUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -623,7 +837,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeMetadataUrlHelperMixin"><span class="type-signature"></span>NodeMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="replaceDatumMetadataUrl"><span class="type-signature"></span>replaceDatumMetadataUrl( [nodeId] [, sourceId])</h4>
     
     
 </dt>
@@ -631,7 +845,7 @@
 
     
     <div class="description">
-        <p>Create a NodeMetadataUrlHelperMixin class.</p>
+        <p>Generate a URL for setting datum metadata via a <code>PUT</code> request.</p>
     </div>
     
 
@@ -654,6 +868,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -666,13 +882,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>nodeId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">number</span>
 
 
 
@@ -680,10 +896,54 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>a specific node ID to use; if not provided the <code>nodeId</code> property of this class will be used</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a specific source ID to use; if not provided the <code>sourceId</code> property of this class will be used</p></td>
         </tr>
 
     
@@ -747,7 +1007,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the URL</p>
 </div>
 
 
@@ -758,7 +1018,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeMetadataUrlHelperMixin.html">module:net~NodeMetadataUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -775,7 +1035,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeUrlHelperMixin"><span class="type-signature"></span>NodeUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="viewDatumMetadataUrl"><span class="type-signature"></span>viewDatumMetadataUrl( [nodeId] [, sourceId])</h4>
     
     
 </dt>
@@ -783,7 +1043,8 @@
 
     
     <div class="description">
-        <p>Create a NodeUrlHelperMixin class.</p>
+        <p>Generate a URL for viewing datum metadata.</p>
+<p>If no <code>sourceId</code> is provided, then the API will return all available datum metadata for all sources.</p>
     </div>
     
 
@@ -806,6 +1067,8 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -818,13 +1081,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>nodeId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">number</span>
 
 
 
@@ -832,10 +1095,56 @@
             </td>
 
             
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>a specific node ID to use; if not provided the <code>nodeId</code> property of this class will be used</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceId</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a specific source ID to use; 
+                           if not provided the <code>sourceId</code> property of this class will be used;
+                           if <code>null</code> then ignore any <code>sourceId</code> property of this class</p></td>
         </tr>
 
     
@@ -899,7 +1208,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the URL</p>
 </div>
 
 
@@ -910,615 +1219,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeUrlHelperMixin.html">module:net~NodeUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="QueryUrlHelperMixin"><span class="type-signature"></span>QueryUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a QueryUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-QueryUrlHelperMixin.html">module:net~QueryUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="UserAuthTokenUrlHelperMixin"><span class="type-signature"></span>UserAuthTokenUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a UserAuthTokenUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-UserAuthTokenUrlHelperMixin.html">module:net~UserAuthTokenUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="UserMetadataUrlHelperMixin"><span class="type-signature"></span>UserMetadataUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a UserMetadataUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-UserMetadataUrlHelperMixin.html">module:net~UserMetadataUrlHelperMixin</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="UserUrlHelperMixin"><span class="type-signature"></span>UserUrlHelperMixin(superclass)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Create a UserUrlHelperMixin class.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the mixin class</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="module-net-UserUrlHelperMixin.html">module:net~UserUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 

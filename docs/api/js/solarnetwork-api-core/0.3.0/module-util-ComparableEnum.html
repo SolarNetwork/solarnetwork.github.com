@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Mixins</title>
+	<title>SolarNetwork Core Class: ComparableEnum</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,14 +86,20 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Mixins</h1>
+	<h1 class="page-title">Class: ComparableEnum</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="module-util.html">util</a>~</span>
         
+        ComparableEnum
         </h2>
+        
+            <div class="class-description"><p>An immutable enum-like object with an associated comparable value.</p>
+<p>This class is essentially abstract, and must be extended by another
+class that overrides the inerited <a href="module-util-Enum.html#.enumValues"><code>module:util~Enum.enumValues</code></a> method.</p></div>
         
     
 </header>
@@ -103,8 +109,112 @@
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="ComparableEnum"><span class="type-signature">&lt;abstract> </span>new ComparableEnum(name, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Constructor.</p>
+    </div>
+    
+
+    
+        <h5>Extends:</h5>
+        
+
+
+    <ul>
+        <li><a href="module-util-Enum.html">module:util~Enum</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
 
         
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the name</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the comparable value</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -144,135 +254,541 @@
 </dl>
 
 
-        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
     
     </div>
 
     
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="module-util-Enum.html">module:util~Enum</a></li>
+    </ul>
+
 
     
 
     
-        <h3 class="subsection-title">Classes</h3>
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
 
         <dl>
-            <dt><a href="module-domain-Aggregation.html">Aggregation</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt class="name" id="name">
+    <h4 id="name"><span class="type-signature"></span>name<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the enum name.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="module-util-Enum.html#name">module:util~Enum#name</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
         
-            <dt><a href="module-domain-AuthTokenStatus.html">AuthTokenStatus</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-AuthTokenType.html">AuthTokenType</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-DatumFilter.html">DatumFilter</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-GeneralMetadata.html">GeneralMetadata</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-InstructionState.html">InstructionState</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-LocationPrecision.html">LocationPrecision</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-Pagination.html">Pagination</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SecurityPolicy.html">SecurityPolicy</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SortDescriptor.html">SortDescriptor</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-AuthorizationV2Builder.html">AuthorizationV2Builder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-DatumMetadataUrlHelper.html">DatumMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-Environment.html">Environment</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-HttpHeaders.html">HttpHeaders</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeDatumUrlHelper.html">NodeDatumUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeInstructionUrlHelper.html">NodeInstructionUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeMetadataUrlHelper.html">NodeMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UrlHelper.html">UrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserAuthTokenUrlHelper.html">UserAuthTokenUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserMetadataUrlHelper.html">UserMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-ComparableEnum.html">ComparableEnum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-Configuration.html">Configuration</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-Enum.html">Enum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-MultiMap.html">MultiMap</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-PropMap.html">PropMap</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt class="name" id="value">
+    <h4 id="value"><span class="type-signature"></span>value<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the comparable value.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
         </dl>
     
 
     
-        <h3 class="subsection-title">Mixins</h3>
+        <h3 class="subsection-title">Methods</h3>
 
         <dl>
-            <dt><a href="module-net-DatumMetadataUrlHelperMixin.html">DatumMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".minimumEnumSet"><span class="type-signature">&lt;static> </span>minimumEnumSet( [minEnum] [, cache])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Compute a complete set of enum values based on a minimum enum and/or set of enums.</p>
+<p>If <code>cache</code> is provided, then results computed via <code>minAggregation</code> 
+will be cached there, and subsequent calls will returned the cached result when appropriate.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
         
-            <dt><a href="module-net-NodeDatumUrlHelperMixin.html">NodeDatumUrlHelperMixin</a></dt>
-            <dd></dd>
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
         
-            <dt><a href="module-net-NodeInstructionUrlHelperMixin.html">NodeInstructionUrlHelperMixin</a></dt>
-            <dd></dd>
+        <th>Name</th>
         
-            <dt><a href="module-net-NodeMetadataUrlHelperMixin.html">NodeMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
+
+        <th>Type</th>
+
         
-            <dt><a href="module-net-NodeUrlHelperMixin.html">NodeUrlHelperMixin</a></dt>
-            <dd></dd>
+        <th>Argument</th>
         
-            <dt><a href="module-net-QueryUrlHelperMixin.html">QueryUrlHelperMixin</a></dt>
-            <dd></dd>
+
         
-            <dt><a href="module-net-UserAuthTokenUrlHelperMixin.html">UserAuthTokenUrlHelperMixin</a></dt>
-            <dd></dd>
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>minEnum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ComparableEnum</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a minimum enum value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cache</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map.&lt;string, Set.&lt;ComparableEnum>></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a cache of computed values</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the computed set, or <code>null</code> if no values match</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            <dt><a href="module-net-UserMetadataUrlHelperMixin.html">UserMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
+<span class="param-type">Set.&lt;ComparableEnum></span>
+|
+
+<span class="param-type">null</span>
+
+
+
+    </dd>
+</dl>
+
+
         
-            <dt><a href="module-net-UserUrlHelperMixin.html">UserUrlHelperMixin</a></dt>
-            <dd></dd>
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="compareTo"><span class="type-signature"></span>compareTo(other)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Compare two ComparableEnum objects based on their <code>value</code> values.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>other</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ComparableEnum</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the object to compare to</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p><code>-1</code> if <code>this.value</code> is less than <code>other.value</code>, 
+                  <code>1</code> if <code>this.value</code> is greater than <code>other.value</code>,
+                  <code>0</code> otherwise (when the values are equal)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
         </dl>
-    
-
-    
-
-    
-
     
 
     
@@ -322,7 +838,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4-dev</a>
 	
-		on 2017-07-20T14:23:56+12:00
+		on 2017-07-20T14:23:57+12:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

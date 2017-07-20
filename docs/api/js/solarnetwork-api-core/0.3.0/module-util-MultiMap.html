@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Global</title>
+	<title>SolarNetwork Core Class: MultiMap</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,14 +86,18 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Global</h1>
+	<h1 class="page-title">Class: MultiMap</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="module-util.html">util</a>~</span>
         
+        MultiMap
         </h2>
+        
+            <div class="class-description"><p>A case-insensitive string key multi-value map object.</p></div>
         
     
 </header>
@@ -103,8 +107,90 @@
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="MultiMap"><span class="type-signature"></span>new MultiMap( [values])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Constructor.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
 
         
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an object who's enumerable properties will be added to this map</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -144,7 +230,21 @@
 </dl>
 
 
-        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
     
     </div>
 
@@ -167,7 +267,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="DatumMetadataUrlHelperMixin"><span class="type-signature"></span>DatumMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="add"><span class="type-signature"></span>add(key, value)</h4>
     
     
 </dt>
@@ -175,7 +275,8 @@
 
     
     <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
+        <p>Add a value.</p>
+<p>This method will append values to existing keys.</p>
     </div>
     
 
@@ -210,13 +311,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -227,7 +328,31 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the key to use</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the value to add</p></td>
         </tr>
 
     
@@ -291,7 +416,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>this object</p>
 </div>
 
 
@@ -302,7 +427,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-DatumMetadataUrlHelperMixin.html">module:net~DatumMetadataUrlHelperMixin</a></span>
+<span class="param-type">module:util~MutliMap</span>
 
 
 
@@ -319,7 +444,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeDatumUrlHelperMixin"><span class="type-signature"></span>NodeDatumUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="clear"><span class="type-signature"></span>clear()</h4>
     
     
 </dt>
@@ -327,7 +452,7 @@
 
     
     <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
+        <p>Remove all properties from this map.</p>
     </div>
     
 
@@ -336,56 +461,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -443,7 +518,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>this object</p>
 </div>
 
 
@@ -454,7 +529,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeDatumUrlHelperMixin.html">module:net~NodeDatumUrlHelperMixin</a></span>
+<span class="param-type">module:util~MutliMap</span>
 
 
 
@@ -471,7 +546,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeInstructionUrlHelperMixin"><span class="type-signature"></span>NodeInstructionUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="containsKey"><span class="type-signature"></span>containsKey(key)</h4>
     
     
 </dt>
@@ -479,7 +554,7 @@
 
     
     <div class="description">
-        <p>Create a NodeInstructionUrlHelperMixin class.</p>
+        <p>Test if there are any values associated with a key.</p>
     </div>
     
 
@@ -514,13 +589,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -531,7 +606,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the key to test</p></td>
         </tr>
 
     
@@ -595,7 +670,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p><code>true</code> if there is at least one value associated with the key</p>
 </div>
 
 
@@ -606,7 +681,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeInstructionUrlHelperMixin.html">module:net~NodeInstructionUrlHelperMixin</a></span>
+<span class="param-type">boolean</span>
 
 
 
@@ -623,7 +698,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeMetadataUrlHelperMixin"><span class="type-signature"></span>NodeMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="firstValue"><span class="type-signature"></span>firstValue(key)</h4>
     
     
 </dt>
@@ -631,7 +706,7 @@
 
     
     <div class="description">
-        <p>Create a NodeMetadataUrlHelperMixin class.</p>
+        <p>Get the first avaialble value assocaited with a key.</p>
     </div>
     
 
@@ -666,13 +741,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -683,7 +758,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the key of the value to get</p></td>
         </tr>
 
     
@@ -747,7 +822,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the first available value associated with the key, or <code>undefined</code> if not available</p>
 </div>
 
 
@@ -758,7 +833,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeMetadataUrlHelperMixin.html">module:net~NodeMetadataUrlHelperMixin</a></span>
+<span class="param-type">*</span>
 
 
 
@@ -775,7 +850,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeUrlHelperMixin"><span class="type-signature"></span>NodeUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="isEmpty"><span class="type-signature"></span>isEmpty()</h4>
     
     
 </dt>
@@ -783,7 +858,7 @@
 
     
     <div class="description">
-        <p>Create a NodeUrlHelperMixin class.</p>
+        <p>Test if the map is empty.</p>
     </div>
     
 
@@ -792,56 +867,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -899,7 +924,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p><code>true</code> if there are no entries in this map</p>
 </div>
 
 
@@ -910,7 +935,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeUrlHelperMixin.html">module:net~NodeUrlHelperMixin</a></span>
+<span class="param-type">boolean</span>
 
 
 
@@ -927,7 +952,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="QueryUrlHelperMixin"><span class="type-signature"></span>QueryUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="keySet"><span class="type-signature"></span>keySet()</h4>
     
     
 </dt>
@@ -935,7 +960,7 @@
 
     
     <div class="description">
-        <p>Create a QueryUrlHelperMixin class.</p>
+        <p>Get an array of all keys in this map.</p>
     </div>
     
 
@@ -944,56 +969,6 @@
     
 
     
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>superclass</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
     
 
     
@@ -1051,7 +1026,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>array of keys in this map, or an empty array if the map is empty</p>
 </div>
 
 
@@ -1062,7 +1037,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-QueryUrlHelperMixin.html">module:net~QueryUrlHelperMixin</a></span>
+<span class="param-type">Array.&lt;string></span>
 
 
 
@@ -1079,7 +1054,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="UserAuthTokenUrlHelperMixin"><span class="type-signature"></span>UserAuthTokenUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="put"><span class="type-signature"></span>put(key, value)</h4>
     
     
 </dt>
@@ -1087,7 +1062,8 @@
 
     
     <div class="description">
-        <p>Create a UserAuthTokenUrlHelperMixin class.</p>
+        <p>Set a value.</p>
+<p>This method will replace any existing values with just <code>value</code>.</p>
     </div>
     
 
@@ -1122,13 +1098,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -1139,7 +1115,31 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the key to use</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">*</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the value to set</p></td>
         </tr>
 
     
@@ -1203,7 +1203,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>this object</p>
 </div>
 
 
@@ -1214,7 +1214,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-UserAuthTokenUrlHelperMixin.html">module:net~UserAuthTokenUrlHelperMixin</a></span>
+<span class="param-type">module:util~MutliMap</span>
 
 
 
@@ -1231,7 +1231,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="UserMetadataUrlHelperMixin"><span class="type-signature"></span>UserMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="putAll"><span class="type-signature"></span>putAll(values)</h4>
     
     
 </dt>
@@ -1239,7 +1239,8 @@
 
     
     <div class="description">
-        <p>Create a UserMetadataUrlHelperMixin class.</p>
+        <p>Set multiple values.</p>
+<p>This method will replace any existing values with those provided on <code>values</code>.</p>
     </div>
     
 
@@ -1274,13 +1275,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>values</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">*</span>
 
 
 
@@ -1291,7 +1292,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>an object who's enumerable properties will be added to this map</p></td>
         </tr>
 
     
@@ -1355,7 +1356,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>this object</p>
 </div>
 
 
@@ -1366,7 +1367,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-UserMetadataUrlHelperMixin.html">module:net~UserMetadataUrlHelperMixin</a></span>
+<span class="param-type">module:util~MutliMap</span>
 
 
 
@@ -1383,7 +1384,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="UserUrlHelperMixin"><span class="type-signature"></span>UserUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="remove"><span class="type-signature"></span>remove(key)</h4>
     
     
 </dt>
@@ -1391,7 +1392,7 @@
 
     
     <div class="description">
-        <p>Create a UserUrlHelperMixin class.</p>
+        <p>Remove all values associated with a key.</p>
     </div>
     
 
@@ -1426,13 +1427,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>key</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -1443,7 +1444,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the key of the values to remove</p></td>
         </tr>
 
     
@@ -1507,7 +1508,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the removed values, or <code>undefined</code> if no values were present for the given key</p>
 </div>
 
 
@@ -1518,7 +1519,261 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-UserUrlHelperMixin.html">module:net~UserUrlHelperMixin</a></span>
+<span class="param-type">Array.&lt;object></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="size"><span class="type-signature"></span>size()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the number of entries in this map.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the number of entries in the map</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="value"><span class="type-signature"></span>value(key)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get the values associated with a key.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the key of the values to get</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the array of values associated with the key, or <code>undefined</code> if not available</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;object></span>
 
 
 
@@ -1581,7 +1836,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4-dev</a>
 	
-		on 2017-07-20T14:23:56+12:00
+		on 2017-07-20T14:23:57+12:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

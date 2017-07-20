@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Mixins</title>
+	<title>SolarNetwork Core Class: Pagination</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,14 +86,18 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Mixins</h1>
+	<h1 class="page-title">Class: Pagination</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="module-domain.html">domain</a>~</span>
         
+        Pagination
         </h2>
+        
+            <div class="class-description"><p>A pagination criteria object.</p></div>
         
     
 </header>
@@ -103,8 +107,122 @@
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="Pagination"><span class="type-signature"></span>new Pagination(max [, offset])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Construct a pagination object.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
 
         
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>max</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the maximum number of results to return</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>offset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the 0-based starting offset</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -144,7 +262,21 @@
 </dl>
 
 
-        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
     
     </div>
 
@@ -153,126 +285,397 @@
     
 
     
-        <h3 class="subsection-title">Classes</h3>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
 
         <dl>
-            <dt><a href="module-domain-Aggregation.html">Aggregation</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt class="name" id="max">
+    <h4 id="max"><span class="type-signature"></span>max<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the maximum number of results to return.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
         
-            <dt><a href="module-domain-AuthTokenStatus.html">AuthTokenStatus</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-AuthTokenType.html">AuthTokenType</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-DatumFilter.html">DatumFilter</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-GeneralMetadata.html">GeneralMetadata</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-InstructionState.html">InstructionState</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-LocationPrecision.html">LocationPrecision</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-Pagination.html">Pagination</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SecurityPolicy.html">SecurityPolicy</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-domain-SortDescriptor.html">SortDescriptor</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-AuthorizationV2Builder.html">AuthorizationV2Builder</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-DatumMetadataUrlHelper.html">DatumMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-Environment.html">Environment</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-HttpHeaders.html">HttpHeaders</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeDatumUrlHelper.html">NodeDatumUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeInstructionUrlHelper.html">NodeInstructionUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeMetadataUrlHelper.html">NodeMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UrlHelper.html">UrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserAuthTokenUrlHelper.html">UserAuthTokenUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserMetadataUrlHelper.html">UserMetadataUrlHelper</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-ComparableEnum.html">ComparableEnum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-Configuration.html">Configuration</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-Enum.html">Enum</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-MultiMap.html">MultiMap</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-util-PropMap.html">PropMap</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt class="name" id="offset">
+    <h4 id="offset"><span class="type-signature"></span>offset<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the results starting offset.</p>
+<p>The first available result starts at offset <code>0</code>. Note this is 
+a raw offset value, not a &quot;page&quot; offset.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
         </dl>
     
 
     
-        <h3 class="subsection-title">Mixins</h3>
+        <h3 class="subsection-title">Methods</h3>
 
         <dl>
-            <dt><a href="module-net-DatumMetadataUrlHelperMixin.html">DatumMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id="toUriEncoding"><span class="type-signature"></span>toUriEncoding()</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get this object as a standard URI encoded (query parameters) string value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the URI encoded string</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            <dt><a href="module-net-NodeDatumUrlHelperMixin.html">NodeDatumUrlHelperMixin</a></dt>
-            <dd></dd>
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
         
-            <dt><a href="module-net-NodeInstructionUrlHelperMixin.html">NodeInstructionUrlHelperMixin</a></dt>
-            <dd></dd>
+
+    
+</dd>
+
         
-            <dt><a href="module-net-NodeMetadataUrlHelperMixin.html">NodeMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id="withOffset"><span class="type-signature"></span>withOffset(offset)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Copy constructor with a new <code>offset</code> value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
         
-            <dt><a href="module-net-NodeUrlHelperMixin.html">NodeUrlHelperMixin</a></dt>
-            <dd></dd>
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
         
-            <dt><a href="module-net-QueryUrlHelperMixin.html">QueryUrlHelperMixin</a></dt>
-            <dd></dd>
+        <th>Name</th>
         
-            <dt><a href="module-net-UserAuthTokenUrlHelperMixin.html">UserAuthTokenUrlHelperMixin</a></dt>
-            <dd></dd>
+
+        <th>Type</th>
+
         
-            <dt><a href="module-net-UserMetadataUrlHelperMixin.html">UserMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
+
         
-            <dt><a href="module-net-UserUrlHelperMixin.html">UserUrlHelperMixin</a></dt>
-            <dd></dd>
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>offset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the new offset to use</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a new instance</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Pagination</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
         </dl>
-    
-
-    
-
-    
-
     
 
     
