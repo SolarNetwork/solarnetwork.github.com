@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Global</title>
+	<title>SolarNetwork Core Module: format</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,15 +86,10 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Global</h1>
+	<h1 class="page-title">Module: format</h1>
 <section>
 
 <header>
-    
-        <h2>
-        
-        </h2>
-        
     
 </header>
 
@@ -167,7 +162,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="DatumMetadataUrlHelperMixin"><span class="type-signature"></span>DatumMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~dateFormat"><span class="type-signature">&lt;inner> </span>dateFormat(date)</h4>
     
     
 </dt>
@@ -175,7 +170,7 @@
 
     
     <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
+        <p>Format a date into a SolarNet UTC date format.</p>
     </div>
     
 
@@ -210,13 +205,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>date</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -227,7 +222,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the date to format</p></td>
         </tr>
 
     
@@ -291,7 +286,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the formatted date value - <code>yyyy-MM-dd</code></p>
 </div>
 
 
@@ -302,7 +297,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-DatumMetadataUrlHelperMixin.html">module:net~DatumMetadataUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -319,7 +314,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeDatumUrlHelperMixin"><span class="type-signature"></span>NodeDatumUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~dateParse"><span class="type-signature">&lt;inner> </span>dateParse(str)</h4>
     
     
 </dt>
@@ -327,7 +322,7 @@
 
     
     <div class="description">
-        <p>Create a NodeDatumUrlHelperMixin class.</p>
+        <p>Parse a SolarNet UTC date value.</p>
     </div>
     
 
@@ -362,13 +357,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>str</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -379,7 +374,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the string to parse - <code>yyyy-MM-dd</code></p></td>
         </tr>
 
     
@@ -443,7 +438,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the parsed date, or <code>null</code></p>
 </div>
 
 
@@ -454,7 +449,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeDatumUrlHelperMixin.html">module:net~NodeDatumUrlHelperMixin</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -471,7 +466,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeInstructionUrlHelperMixin"><span class="type-signature"></span>NodeInstructionUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~dateParser"><span class="type-signature">&lt;inner> </span>dateParser(str)</h4>
     
     
 </dt>
@@ -479,7 +474,7 @@
 
     
     <div class="description">
-        <p>Create a NodeInstructionUrlHelperMixin class.</p>
+        <p>Parse a UTC date string, from a variety of supported formats.</p>
     </div>
     
 
@@ -514,13 +509,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>str</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">String</span>
 
 
 
@@ -531,7 +526,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the string to parse into a date</p></td>
         </tr>
 
     
@@ -595,7 +590,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the parsed <code>Date</code>, or <code>null</code> if the date can't be parsed</p>
 </div>
 
 
@@ -606,7 +601,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeInstructionUrlHelperMixin.html">module:net~NodeInstructionUrlHelperMixin</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -623,7 +618,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeMetadataUrlHelperMixin"><span class="type-signature"></span>NodeMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~dateTimeFormat"><span class="type-signature">&lt;inner> </span>dateTimeFormat(date)</h4>
     
     
 </dt>
@@ -631,7 +626,7 @@
 
     
     <div class="description">
-        <p>Create a NodeMetadataUrlHelperMixin class.</p>
+        <p>Format a date into a SolarNet UTC date/time format.</p>
     </div>
     
 
@@ -666,13 +661,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>date</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -683,7 +678,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the date to format</p></td>
         </tr>
 
     
@@ -747,7 +742,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the formatted date value - <code>yyyy-MM-dd HH:mm</code></p>
 </div>
 
 
@@ -758,7 +753,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeMetadataUrlHelperMixin.html">module:net~NodeMetadataUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -775,7 +770,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="NodeUrlHelperMixin"><span class="type-signature"></span>NodeUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~dateTimeParse"><span class="type-signature">&lt;inner> </span>dateTimeParse(str)</h4>
     
     
 </dt>
@@ -783,7 +778,7 @@
 
     
     <div class="description">
-        <p>Create a NodeUrlHelperMixin class.</p>
+        <p>Parse a SolarNet UTC date/time.</p>
     </div>
     
 
@@ -818,13 +813,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>str</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -835,7 +830,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the string to parse - `yyyy-MM-dd HH:mm</p></td>
         </tr>
 
     
@@ -899,7 +894,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the parsed date, or <code>null</code></p>
 </div>
 
 
@@ -910,7 +905,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-NodeUrlHelperMixin.html">module:net~NodeUrlHelperMixin</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -927,7 +922,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="QueryUrlHelperMixin"><span class="type-signature"></span>QueryUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~dateTimeUrlFormat"><span class="type-signature">&lt;inner> </span>dateTimeUrlFormat(date)</h4>
     
     
 </dt>
@@ -935,7 +930,7 @@
 
     
     <div class="description">
-        <p>Create a QueryUrlHelperMixin class.</p>
+        <p>Format a date into a SolarNet URL UTC date/time format.</p>
     </div>
     
 
@@ -970,13 +965,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>date</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -987,7 +982,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the date to format</p></td>
         </tr>
 
     
@@ -1051,7 +1046,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the formatted date value - <code>yyyy-MM-dd'T'HH:mm</code></p>
 </div>
 
 
@@ -1062,7 +1057,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-QueryUrlHelperMixin.html">module:net~QueryUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -1079,7 +1074,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="UserAuthTokenUrlHelperMixin"><span class="type-signature"></span>UserAuthTokenUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~dateTimeUrlParse"><span class="type-signature">&lt;inner> </span>dateTimeUrlParse(str)</h4>
     
     
 </dt>
@@ -1087,7 +1082,7 @@
 
     
     <div class="description">
-        <p>Create a UserAuthTokenUrlHelperMixin class.</p>
+        <p>Parse a SolarNet URL UTC date/time value.</p>
     </div>
     
 
@@ -1122,13 +1117,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>str</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -1139,7 +1134,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the string to parse - <code>yyyy-MM-dd'T'HH:mm</code></p></td>
         </tr>
 
     
@@ -1203,7 +1198,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the parsed date, or <code>null</code></p>
 </div>
 
 
@@ -1214,7 +1209,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-UserAuthTokenUrlHelperMixin.html">module:net~UserAuthTokenUrlHelperMixin</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -1231,7 +1226,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="UserMetadataUrlHelperMixin"><span class="type-signature"></span>UserMetadataUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~iso8601Date"><span class="type-signature">&lt;inner> </span>iso8601Date(date [, includeTime])</h4>
     
     
 </dt>
@@ -1239,7 +1234,7 @@
 
     
     <div class="description">
-        <p>Create a UserMetadataUrlHelperMixin class.</p>
+        <p>Format a date into an ISO 8601 timestamp or date string, in the UTC time zone.</p>
     </div>
     
 
@@ -1262,7 +1257,11 @@
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
+        
+        <th>Default</th>
         
 
         <th class="last">Description</th>
@@ -1274,13 +1273,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>date</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -1288,10 +1287,62 @@
             </td>
 
             
+                <td class="attributes">
+                
 
+                
+
+                
+                </td>
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            
+                <td class="default">
+                
+                </td>
+            
+
+            <td class="description last"><p>the date to format</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>includeTime</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+                <td class="default">
+                
+                    false
+                
+                </td>
+            
+
+            <td class="description last"><p><code>true</code> to format as a timestamp, <code>false</code> as just a date</p></td>
         </tr>
 
     
@@ -1355,7 +1406,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the formatted date string</p>
 </div>
 
 
@@ -1366,7 +1417,7 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-UserMetadataUrlHelperMixin.html">module:net~UserMetadataUrlHelperMixin</a></span>
+<span class="param-type">string</span>
 
 
 
@@ -1383,7 +1434,7 @@
             
 <hr>
 <dt>
-    <h4 class="name" id="UserUrlHelperMixin"><span class="type-signature"></span>UserUrlHelperMixin(superclass)</h4>
+    <h4 class="name" id="~timestampFormat"><span class="type-signature">&lt;inner> </span>timestampFormat(date)</h4>
     
     
 </dt>
@@ -1391,7 +1442,7 @@
 
     
     <div class="description">
-        <p>Create a UserUrlHelperMixin class.</p>
+        <p>Format a date into a SolarNet UTC timestamp format.</p>
     </div>
     
 
@@ -1426,13 +1477,13 @@
 
         <tr>
             
-                <td class="name"><code>superclass</code></td>
+                <td class="name"><code>date</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type"><a href="module-net-UrlHelper.html">module:net~UrlHelper</a></span>
+<span class="param-type">Date</span>
 
 
 
@@ -1443,7 +1494,7 @@
 
             
 
-            <td class="description last"><p>the UrlHelper class to mix onto</p></td>
+            <td class="description last"><p>the date to format</p></td>
         </tr>
 
     
@@ -1507,7 +1558,7 @@
     
             
 <div class="param-desc">
-    <p>the mixin class</p>
+    <p>the formatted date value - <code>yyyy-MM-dd HH:mm:ss.SSS'Z'</code></p>
 </div>
 
 
@@ -1518,7 +1569,159 @@
     </dt>
     <dd>
         
-<span class="param-type"><a href="module-net-UserUrlHelperMixin.html">module:net~UserUrlHelperMixin</a></span>
+<span class="param-type">string</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~timestampParse"><span class="type-signature">&lt;inner> </span>timestampParse(str)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Parse a SolarNet UTC timestamp value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>str</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the string to parse - `yyyy-MM-dd HH:mm:ss.SSS'Z'</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the parsed date, or <code>null</code></p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Date</span>
 
 
 

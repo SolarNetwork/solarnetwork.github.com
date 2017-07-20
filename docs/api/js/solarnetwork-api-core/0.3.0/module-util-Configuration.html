@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Core Mixins</title>
+	<title>SolarNetwork Core Class: Configuration</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -86,14 +86,19 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Mixins</h1>
+	<h1 class="page-title">Class: Configuration</h1>
 <section>
 
 <header>
     
         <h2>
+            <span class="ancestors"><a href="module-util.html">util</a>~</span>
         
+        Configuration
         </h2>
+        
+            <div class="class-description"><p>A configuration utility object.</p>
+<p>Properties can be get/set by using the <a href="module-util-Configuration.html#value"><code>module:util~Configuration#value</code></a> function.</p></div>
         
     
 </header>
@@ -103,8 +108,80 @@
     <div class="container-overview">
     
         
+<hr>
+<dt>
+    <h4 class="name" id="Configuration"><span class="type-signature"></span>new Configuration(initialMap)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Constructor.</p>
+<p>For any properties passed on <code>initialMap</code>, <a href="module-util-Configuration.html#value"><code>module:util~Configuration#value</code></a> will
+be called so those properties are defined on this instance.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
 
         
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>initialMap</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the optional initial properties to store</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
 <dl class="details">
     
 
@@ -144,7 +221,21 @@
 </dl>
 
 
-        
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
     
     </div>
 
@@ -153,126 +244,710 @@
     
 
     
-        <h3 class="subsection-title">Classes</h3>
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
 
         <dl>
-            <dt><a href="module-domain-Aggregation.html">Aggregation</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id="enabled"><span class="type-signature"></span>enabled(key)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Test if a key is truthy.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
         
-            <dt><a href="module-domain-AuthTokenStatus.html">AuthTokenStatus</a></dt>
-            <dd></dd>
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
         
-            <dt><a href="module-domain-AuthTokenType.html">AuthTokenType</a></dt>
-            <dd></dd>
+        <th>Name</th>
         
-            <dt><a href="module-domain-DatumFilter.html">DatumFilter</a></dt>
-            <dd></dd>
+
+        <th>Type</th>
+
         
-            <dt><a href="module-domain-GeneralMetadata.html">GeneralMetadata</a></dt>
-            <dd></dd>
+
         
-            <dt><a href="module-domain-InstructionState.html">InstructionState</a></dt>
-            <dd></dd>
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the key to test</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p><code>true</code> if the key is enabled</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            <dt><a href="module-domain-LocationPrecision.html">LocationPrecision</a></dt>
-            <dd></dd>
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
         
-            <dt><a href="module-domain-Pagination.html">Pagination</a></dt>
-            <dd></dd>
+
+    
+</dd>
+
         
-            <dt><a href="module-domain-SecurityPolicy.html">SecurityPolicy</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id="toggle"><span class="type-signature"></span>toggle(key, enabled)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Set or toggle the enabled status of a given key.</p>
+<p>If the <code>enabled</code> parameter is not passed, then the enabled
+status will be toggled to its opposite value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
         
-            <dt><a href="module-domain-SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></dt>
-            <dd></dd>
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
         
-            <dt><a href="module-domain-SortDescriptor.html">SortDescriptor</a></dt>
-            <dd></dd>
+        <th>Name</th>
         
-            <dt><a href="module-net-AuthorizationV2Builder.html">AuthorizationV2Builder</a></dt>
-            <dd></dd>
+
+        <th>Type</th>
+
         
-            <dt><a href="module-net-DatumMetadataUrlHelper.html">DatumMetadataUrlHelper</a></dt>
-            <dd></dd>
+
         
-            <dt><a href="module-net-Environment.html">Environment</a></dt>
-            <dd></dd>
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>they key to set</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>enabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">boolean</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the optional enabled value to set</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>this object to allow method chaining</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            <dt><a href="module-net-HttpHeaders.html">HttpHeaders</a></dt>
-            <dd></dd>
+<span class="param-type"><a href="module-util-Configuration.html">module:util~Configuration</a></span>
+
+
+
+    </dd>
+</dl>
+
+
         
-            <dt><a href="module-net-NodeDatumUrlHelper.html">NodeDatumUrlHelper</a></dt>
-            <dd></dd>
+
+    
+</dd>
+
         
-            <dt><a href="module-net-NodeInstructionUrlHelper.html">NodeInstructionUrlHelper</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id="value"><span class="type-signature"></span>value(key [, newValue])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get or set a configuration value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
         
-            <dt><a href="module-net-NodeMetadataUrlHelper.html">NodeMetadataUrlHelper</a></dt>
-            <dd></dd>
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
         
-            <dt><a href="module-net-UrlHelper.html">UrlHelper</a></dt>
-            <dd></dd>
+        <th>Name</th>
         
-            <dt><a href="module-net-UserAuthTokenUrlHelper.html">UserAuthTokenUrlHelper</a></dt>
-            <dd></dd>
+
+        <th>Type</th>
+
         
-            <dt><a href="module-net-UserMetadataUrlHelper.html">UserMetadataUrlHelper</a></dt>
-            <dd></dd>
+        <th>Argument</th>
         
-            <dt><a href="module-util-ComparableEnum.html">ComparableEnum</a></dt>
-            <dd></dd>
+
         
-            <dt><a href="module-util-Configuration.html">Configuration</a></dt>
-            <dd></dd>
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>The key to get or set the value for</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>newValue</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>If defined, the new value to set for the given <code>key</code>.
+                           If <code>null</code> then the value will be removed.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>If called as a getter, the associated value for the given <code>key</code>,
+                  otherwise this object.</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
         
-            <dt><a href="module-util-Enum.html">Enum</a></dt>
-            <dd></dd>
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
         
-            <dt><a href="module-util-MultiMap.html">MultiMap</a></dt>
-            <dd></dd>
+
+    
+</dd>
+
         
-            <dt><a href="module-util-PropMap.html">PropMap</a></dt>
-            <dd></dd>
+            
+<hr>
+<dt>
+    <h4 class="name" id="values"><span class="type-signature"></span>values( [newMap])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get or set multiple properties.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>newMap</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a map of values to set</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>if called as a getter, all properties of this object copied into a simple object;
+                  otherwise this object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
         </dl>
-    
-
-    
-        <h3 class="subsection-title">Mixins</h3>
-
-        <dl>
-            <dt><a href="module-net-DatumMetadataUrlHelperMixin.html">DatumMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeDatumUrlHelperMixin.html">NodeDatumUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeInstructionUrlHelperMixin.html">NodeInstructionUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeMetadataUrlHelperMixin.html">NodeMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-NodeUrlHelperMixin.html">NodeUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-QueryUrlHelperMixin.html">QueryUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserAuthTokenUrlHelperMixin.html">UserAuthTokenUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserMetadataUrlHelperMixin.html">UserMetadataUrlHelperMixin</a></dt>
-            <dd></dd>
-        
-            <dt><a href="module-net-UserUrlHelperMixin.html">UserUrlHelperMixin</a></dt>
-            <dd></dd>
-        </dl>
-    
-
-    
-
-    
-
     
 
     
@@ -322,7 +997,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4-dev</a>
 	
-		on 2017-07-20T14:23:56+12:00
+		on 2017-07-20T14:23:57+12:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
