@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SolarNetwork Core Class: ComparableEnum</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">SolarNetwork Core</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-domain.html">domain</a></li><li><a href="module-format.html">format</a></li><li><a href="module-net.html">net</a></li><li><a href="module-util.html">util</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Logger.html">Logger</a></li><li><a href="module-domain-Aggregation.html">domain~Aggregation</a></li><li><a href="module-domain-AuthTokenStatus.html">domain~AuthTokenStatus</a></li><li><a href="module-domain-AuthTokenType.html">domain~AuthTokenType</a></li><li><a href="module-domain-DatumFilter.html">domain~DatumFilter</a></li><li><a href="module-domain-GeneralMetadata.html">domain~GeneralMetadata</a></li><li><a href="module-domain-InstructionState.html">domain~InstructionState</a></li><li><a href="module-domain-Location.html">domain~Location</a></li><li><a href="module-domain-LocationPrecision.html">domain~LocationPrecision</a></li><li><a href="module-domain-Pagination.html">domain~Pagination</a></li><li><a href="module-domain-SecurityPolicy.html">domain~SecurityPolicy</a></li><li><a href="module-domain-SecurityPolicyBuilder.html">domain~SecurityPolicyBuilder</a></li><li><a href="module-domain-SortDescriptor.html">domain~SortDescriptor</a></li><li><a href="module-net-AuthorizationV2Builder.html">net~AuthorizationV2Builder</a></li><li><a href="module-net-Environment.html">net~Environment</a></li><li><a href="module-net-HttpHeaders.html">net~HttpHeaders</a></li><li><a href="module-net-LocationDatumMetadataUrlHelper.html">net~LocationDatumMetadataUrlHelper</a></li><li><a href="module-net-LocationDatumUrlHelper.html">net~LocationDatumUrlHelper</a></li><li><a href="module-net-NodeDatumMetadataUrlHelper.html">net~NodeDatumMetadataUrlHelper</a></li><li><a href="module-net-NodeDatumUrlHelper.html">net~NodeDatumUrlHelper</a></li><li><a href="module-net-NodeInstructionUrlHelper.html">net~NodeInstructionUrlHelper</a></li><li><a href="module-net-NodeMetadataUrlHelper.html">net~NodeMetadataUrlHelper</a></li><li><a href="module-net-UrlHelper.html">net~UrlHelper</a></li><li><a href="module-net-UserAuthTokenUrlHelper.html">net~UserAuthTokenUrlHelper</a></li><li><a href="module-net-UserMetadataUrlHelper.html">net~UserMetadataUrlHelper</a></li><li><a href="module-util-ComparableEnum.html">util~ComparableEnum</a></li><li><a href="module-util-Configuration.html">util~Configuration</a></li><li><a href="module-util-Enum.html">util~Enum</a></li><li><a href="module-util-MultiMap.html">util~MultiMap</a></li><li><a href="module-util-PropMap.html">util~PropMap</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-net-LocationDatumMetadataUrlHelperMixin.html">net~LocationDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-LocationDatumUrlHelperMixin.html">net~LocationDatumUrlHelperMixin</a></li><li><a href="module-net-LocationUrlHelperMixin.html">net~LocationUrlHelperMixin</a></li><li><a href="module-net-NodeDatumMetadataUrlHelperMixin.html">net~NodeDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeDatumUrlHelperMixin.html">net~NodeDatumUrlHelperMixin</a></li><li><a href="module-net-NodeInstructionUrlHelperMixin.html">net~NodeInstructionUrlHelperMixin</a></li><li><a href="module-net-NodeMetadataUrlHelperMixin.html">net~NodeMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeUrlHelperMixin.html">net~NodeUrlHelperMixin</a></li><li><a href="module-net-QueryUrlHelperMixin.html">net~QueryUrlHelperMixin</a></li><li><a href="module-net-UserAuthTokenUrlHelperMixin.html">net~UserAuthTokenUrlHelperMixin</a></li><li><a href="module-net-UserMetadataUrlHelperMixin.html">net~UserMetadataUrlHelperMixin</a></li><li><a href="module-net-UserUrlHelperMixin.html">net~UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#LocationDatumMetadataUrlHelperMixin">LocationDatumMetadataUrlHelperMixin</a></li><li><a href="global.html#LocationDatumUrlHelperMixin">LocationDatumUrlHelperMixin</a></li><li><a href="global.html#LocationUrlHelperMixin">LocationUrlHelperMixin</a></li><li><a href="global.html#NodeDatumMetadataUrlHelperMixin">NodeDatumMetadataUrlHelperMixin</a></li><li><a href="global.html#NodeDatumUrlHelperMixin">NodeDatumUrlHelperMixin</a></li><li><a href="global.html#NodeInstructionUrlHelperMixin">NodeInstructionUrlHelperMixin</a></li><li><a href="global.html#NodeMetadataUrlHelperMixin">NodeMetadataUrlHelperMixin</a></li><li><a href="global.html#NodeUrlHelperMixin">NodeUrlHelperMixin</a></li><li><a href="global.html#QueryUrlHelperMixin">QueryUrlHelperMixin</a></li><li><a href="global.html#UserAuthTokenUrlHelperMixin">UserAuthTokenUrlHelperMixin</a></li><li><a href="global.html#UserMetadataUrlHelperMixin">UserMetadataUrlHelperMixin</a></li><li><a href="global.html#UserUrlHelperMixin">UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Class: ComparableEnum</h1>
+<section>
+
+<header>
+    
+        <h2>
+            <span class="ancestors"><a href="module-util.html">util</a>~</span>
+        
+        ComparableEnum
+        </h2>
+        
+            <div class="class-description"><p>An immutable enum-like object with an associated comparable value.</p>
+<p>This class is essentially abstract, and must be extended by another
+class that overrides the inerited <a href="module-util-Enum.html#.enumValues"><code>module:util~Enum.enumValues</code></a> method.</p></div>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+<hr>
+<dt>
+    <h4 class="name" id="ComparableEnum"><span class="type-signature">&lt;abstract> </span>new ComparableEnum(name, value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Constructor.</p>
+    </div>
+    
+
+    
+        <h5>Extends:</h5>
+        
+
+
+    <ul>
+        <li><a href="module-util-Enum.html">module:util~Enum</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>name</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the name</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the comparable value</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dd>
+
+    
+    </div>
+
+    
+        <h3 class="subsection-title">Extends</h3>
+
+        
+
+
+    <ul>
+        <li><a href="module-util-Enum.html">module:util~Enum</a></li>
+    </ul>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="name">
+    <h4 id="name"><span class="type-signature"></span>name<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the enum name.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="module-util-Enum.html#name">module:util~Enum#name</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="value">
+    <h4 id="value"><span class="type-signature"></span>value<span class="type-signature"></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>Get the comparable value.</p>
+    </div>
+    
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id=".minimumEnumSet"><span class="type-signature">&lt;static> </span>minimumEnumSet( [minEnum] [, cache])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Compute a complete set of enum values based on a minimum enum and/or set of enums.</p>
+<p>If <code>cache</code> is provided, then results computed via <code>minAggregation</code> 
+will be cached there, and subsequent calls will returned the cached result when appropriate.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>minEnum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ComparableEnum</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a minimum enum value</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>cache</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map.&lt;string, Set.&lt;ComparableEnum>></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>a cache of computed values</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the computed set, or <code>null</code> if no values match</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Set.&lt;ComparableEnum></span>
+|
+
+<span class="param-type">null</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="compareTo"><span class="type-signature"></span>compareTo(other)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Compare two ComparableEnum objects based on their <code>value</code> values.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>other</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">ComparableEnum</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the object to compare to</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p><code>-1</code> if <code>this.value</code> is less than <code>other.value</code>, 
+                  <code>1</code> if <code>this.value</code> is greater than <code>other.value</code>,
+                  <code>0</code> otherwise (when the values are equal)</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">number</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="equals"><span class="type-signature"></span>equals(value)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Test if a string is equal to this enum's name.</p>
+<p>As long as enum values are consistently obtained from the <a href="module-util-Enum.html#.enumValues"><code>module:util~Enum.enumValues</code></a>
+array then enum instances can be compared with <code>===</code>. If unsure, this method can be used
+to compare string values instead.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>value</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the value to test</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+	<dt class="inherited-from method-doc-label method-doc-details-label">Inherited From:</dt>
+	<dd class="inherited-from">
+		<ul class="dummy">
+			<li>
+				<a href="module-util-Enum.html#equals">module:util~Enum#equals</a>
+			</li>
+		</ul>
+	</dd>
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p><code>true</code> if <code>value</code> is the same as this instance's <code>name</code> value</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">boolean</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4-dev</a>
+	
+		on 2017-08-02T11:31:41+12:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
