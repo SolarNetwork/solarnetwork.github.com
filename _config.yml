@@ -1,5 +1,4 @@
-auto: true
 lsi: false
 safe: true
-baseurl: 
+baseurl:
 permalink: /:categories/:year-:month/:title.html
