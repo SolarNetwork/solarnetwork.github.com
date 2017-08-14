@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork SSH Class: DatumLoader</title>
+	<title>SolarNetwork Datum Loader Class: DatumLoader</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -20,7 +20,7 @@
 <div class="navbar navbar-default navbar-fixed-top ">
 <div class="container">
 	<div class="navbar-header">
-		<a class="navbar-brand" href="index.html">SolarNetwork SSH</a>
+		<a class="navbar-brand" href="index.html">SolarNetwork Datum Loader</a>
 		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
 			<span class="icon-bar"></span>
 			<span class="icon-bar"></span>
@@ -33,7 +33,14 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="DatumLoader.html">DatumLoader</a></li>
+					<li><a href="DatumLoader.html">DatumLoader</a></li><li><a href="MultiLoader.html">MultiLoader</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="interfaces.list.html" class="dropdown-toggle" data-toggle="dropdown">Interfaces<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Loader.html">Loader</a></li>
 				</ul>
 			</li>
 			
@@ -259,6 +266,13 @@ callback function can also be passed as an argument to the <a href="DatumLoader.
     
 
     
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li><a href="Loader.html">Loader</a></li>
+        
+    </ul></dd>
+    
 
     
 
@@ -297,6 +311,20 @@ callback function can also be passed as an argument to the <a href="DatumLoader.
     
 
     
+        <h5>Example</h5>
+        
+    <pre class="sunlight-highlight-javascript">const filter = new DatumFilter();
+filter.nodeId = 123;
+// configure other filter settings here...
+
+const urlHelper = new NodeDatumUrlHelper();
+
+new DatumLoader(urlHelper, filter).load((error, results) =&gt; {
+  // results is an array of Datum objects
+});</pre>
+
+
+    
 </dd>
 
     
@@ -316,6 +344,77 @@ callback function can also be passed as an argument to the <a href="DatumLoader.
         <h3 class="subsection-title">Members</h3>
 
         <dl>
+            
+<hr>
+<dt class="name" id=".version">
+    <h4 id=".version"><span class="type-signature">&lt;static, readonly> </span>version<span class="type-signature"> :string</span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The class version.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">string</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
             
 <hr>
 <dt class="name" id="authBuilder">
@@ -580,7 +679,7 @@ and a <code>Pagination</code> that details which page the callback represents.</
             <td class="type">
             
                 
-<span class="param-type">dataCallback</span>
+<span class="param-type"><a href="DatumLoader.html#~dataCallback">DatumLoader~dataCallback</a></span>
 
 
 
@@ -676,7 +775,7 @@ and a <code>Pagination</code> that details which page the callback represents.</
     </dt>
     <dd>
         
-<span class="param-type">dataCallback</span>
+<span class="param-type"><a href="DatumLoader.html#~dataCallback">DatumLoader~dataCallback</a></span>
 |
 
 <span class="param-type"><a href="DatumLoader.html">DatumLoader</a></span>
@@ -1091,7 +1190,7 @@ function to be passed to things like <code>queue.defer</code>, for example.</p>
             <td class="type">
             
                 
-<span class="param-type">function</span>
+<span class="param-type"><a href="DatumLoader.html#~dataCallback">DatumLoader~dataCallback</a></span>
 
 
 
@@ -1113,8 +1212,7 @@ function to be passed to things like <code>queue.defer</code>, for example.</p>
             
 
             <td class="description last"><p>a callback function to use; either this argument must be provided
-                             or the function must have already been configured via 
-                             <a href="DatumLoader.html#callback"><code>DatumLoader#callback</code></a></p></td>
+                             or the function must have already been configured via <a href="DatumLoader.html#callback"><code>DatumLoader#callback</code></a></p></td>
         </tr>
 
     
@@ -1137,6 +1235,13 @@ function to be passed to things like <code>queue.defer</code>, for example.</p>
 
     
 
+    
+    <dt class="implements">Implements:</dt>
+    <dd class="implements"><ul>
+        
+            <li><a href="Loader.html#load">Loader#load</a></li>
+        
+    </ul></dd>
     
 
     
@@ -1380,7 +1485,7 @@ If a property value is an array, multiple parameters for that property will be a
                 
 <hr>
 <dt>
-    <h4 class="name" id="~dataCallback"><span class="type-signature"></span>dataCallback(data [, done] [, page])</h4>
+    <h4 class="name" id="~dataCallback"><span class="type-signature"></span>dataCallback( [error], data [, done] [, page])</h4>
     
     
 </dt>
@@ -1421,6 +1526,40 @@ If a property value is an array, multiple parameters for that property will be a
     </thead>
 
     <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>error</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Error</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an error if a failure occurred</p></td>
+        </tr>
+
     
 
         <tr>
@@ -1630,7 +1769,7 @@ If a property value is an array, multiple parameters for that property will be a
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4-dev</a>
 	
-		on 2017-08-02T11:49:52+12:00
+		on 2017-08-14T10:31:05+12:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
