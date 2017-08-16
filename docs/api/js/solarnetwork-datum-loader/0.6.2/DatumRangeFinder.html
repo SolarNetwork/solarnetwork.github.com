@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Datum Loader Class: MultiLoader</title>
+	<title>SolarNetwork Datum Loader Class: DatumRangeFinder</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,7 +33,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="DatumLoader.html">DatumLoader</a></li><li><a href="MultiLoader.html">MultiLoader</a></li>
+					<li><a href="DatumLoader.html">DatumLoader</a></li><li><a href="DatumRangeFinder.html">DatumRangeFinder</a></li><li><a href="DatumSourceFinder.html">DatumSourceFinder</a></li><li><a href="JsonClientSupport.html">JsonClientSupport</a></li><li><a href="MultiLoader.html">MultiLoader</a></li>
 				</ul>
 			</li>
 			
@@ -79,19 +79,28 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Class: MultiLoader</h1>
+	<h1 class="page-title">Class: DatumRangeFinder</h1>
 <section>
 
 <header>
     
         <h2>
-        MultiLoader
+        DatumRangeFinder
         </h2>
         
-            <div class="class-description"><p>Load data from multiple <a href="Loader.html"><code>Loader</code></a> objects, invoking a callback function
-after all data has been loaded. Call <a href="MultiLoader.html#load"><code>MultiLoader#load</code></a> to start loading the data.</p>
-<p>The <a href="DatumLoader.html"><code>DatumLoader</code></a> class conforms to the <a href="Loader.html"><code>Loader</code></a> interface, so can be used to
-load arrays of <a href="global.html#Datum"><code>Datum</code></a> objects based on search criteria.</p></div>
+            <div class="class-description"><p>Class to find the available datum date range for a set of node datum URL helpers.</p>
+<p>This is useful when generating reports or charts for a set of SolarNode datum streams,
+so the overall start/end dates can be determined before requesting the actual data.
+It returns an object starting and ending date related properties, for example:</p>
+<pre class="prettyprint source"><code>{
+  &quot;timeZone&quot;:        &quot;Pacific/Auckland&quot;,
+  &quot;sDate&quot;:           Date(1248668709972),
+  &quot;startDate&quot;:       &quot;2009-07-27 16:25&quot;,
+  &quot;startDateMillis&quot;: 1248668709972,
+  &quot;eDate&quot;:           Date(1379824746781),
+  &quot;endDate&quot;:         &quot;2013-09-22 16:39&quot;,
+  &quot;endDateMillis&quot;:   1379824746781
+}</code></pre></div>
         
     
 </header>
@@ -103,7 +112,7 @@ load arrays of <a href="global.html#Datum"><code>Datum</code></a> objects based 
         
 <hr>
 <dt>
-    <h4 class="name" id="MultiLoader"><span class="type-signature"></span>new MultiLoader(loaders)</h4>
+    <h4 class="name" id="DatumRangeFinder"><span class="type-signature"></span>new DatumRangeFinder(urlHelpers [, authBuilder])</h4>
     
     
 </dt>
@@ -134,6 +143,8 @@ load arrays of <a href="global.html#Datum"><code>Datum</code></a> objects based 
         <th>Type</th>
 
         
+        <th>Argument</th>
+        
 
         
 
@@ -146,13 +157,16 @@ load arrays of <a href="global.html#Datum"><code>Datum</code></a> objects based 
 
         <tr>
             
-                <td class="name"><code>loaders</code></td>
+                <td class="name"><code>urlHelpers</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;<a href="Loader.html">Loader</a>></span>
+<span class="param-type">NodeDatumUrlHelper</span>
+|
+
+<span class="param-type">Array.&lt;NodeDatumUrlHelper></span>
 
 
 
@@ -160,10 +174,54 @@ load arrays of <a href="global.html#Datum"><code>Datum</code></a> objects based 
             </td>
 
             
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
 
             
 
-            <td class="description last"><p>array of loader objects</p></td>
+            <td class="description last"><p>the helper(s) to find the avaialble data range for</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>authBuilder</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">AuthorizationV2Builder</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the auth builder to authenticate requests with; if not provided
+                                              then only public data can be queried; when provided a pre-signed
+                                              key must be available</p></td>
         </tr>
 
     
@@ -225,24 +283,28 @@ load arrays of <a href="global.html#Datum"><code>Datum</code></a> objects based 
     
 
     
-        <h5>Example</h5>
+        <h5>Examples</h5>
         
-    <pre class="sunlight-highlight-javascript">const filter1 = new DatumFilter();
-filter1.nodeId = 123;
-// configure other filter settings here...
-
-const filter2 = new DatumFilter();
-filter2.nodeId = 234;
-// configure other filter settings here
-
+    <pre class="sunlight-highlight-javascript">// the simple case, for just one SolarNode
 const urlHelper = new NodeDatumUrlHelper();
+urlHelper.publicQuery = true;
+urlHelper.nodeId = 123;
+urlHelper.sourceIds = [&#x27;a&#x27;, &#x27;b&#x27;];
+const range = await new DatumRangeFinder(urlHelper).fetch();</pre>
 
-new MultiLoader([
-  new DatumLoader(urlHelper, filter1),
-  new DatumLoader(urlHelper, filter2),
-]).load((error, results) =&gt; {
-  // results is a 2-element array of Datum arrays
-});</pre>
+    <pre class="sunlight-highlight-javascript">// more complex case, for multiple SolarNode / source ID combinations
+const urlHelper2 = new NodeDatumUrlHelper();
+urlHelper2.publicQuery = true;
+urlHelper2.nodeId = 234;
+urlHelper2.sourceId = &#x27;c&#x27;;
+const range2 = await new DatumRangeFinder([urlHelper, urlHelper2]).fetch();</pre>
+
+    <pre class="sunlight-highlight-javascript">// with authentication; note the authentication must be valid for all SolarNodes!
+const auth = new AuthorizationV2Builder(&#x27;my-token&#x27;);
+auth.saveSigningKey(&#x27;secret&#x27;);
+urlHelper.publicQuery = false;
+urlHelper2.publicQuery = false;
+const range3 = await new DatumRangeFinder([urlHelper, urlHelper2], auth).fetch();</pre>
 
 
     
@@ -345,7 +407,7 @@ new MultiLoader([
             
 <hr>
 <dt>
-    <h4 class="name" id="callback"><span class="type-signature"></span>callback( [value])</h4>
+    <h4 class="name" id="load"><span class="type-signature"></span>load(callback)</h4>
     
     
 </dt>
@@ -353,9 +415,7 @@ new MultiLoader([
 
     
     <div class="description">
-        <p>Get or set the callback function, invoked after all data has been loaded. The callback
-function will be passed two arguments: an error and the results as an array of results
-from each configured <a href="Loader.html"><code>Loader</code></a>.</p>
+        <p>Asynchronously find the available datum range using a callback.</p>
     </div>
     
 
@@ -377,178 +437,6 @@ from each configured <a href="Loader.html"><code>Loader</code></a>.</p>
 
         <th>Type</th>
 
-        
-        <th>Argument</th>
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>value</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="MultiLoader.html#~dataCallback">MultiLoader~dataCallback</a></span>
-
-
-
-            
-            </td>
-
-            
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
-
-            
-
-            <td class="description last"><p>the callback function to use</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>when used as a getter, the current callback function, otherwise this object</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="MultiLoader.html#~dataCallback">MultiLoader~dataCallback</a></span>
-|
-
-<span class="param-type"><a href="MultiLoader.html">MultiLoader</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        
-            
-<hr>
-<dt>
-    <h4 class="name" id="load"><span class="type-signature"></span>load( [callback])</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Initiate loading the data. This will call <a href="Loader.html#load"><code>Loader#load</code></a> on each
-supplied loader, in parallel. As an alternative to configuring the callback function via
-the <a href="MultiLoader.html#callback"><code>MultiLoader#callback</code></a> method, a callback function can be passed as an argument
-to this function. This allows this function to be passed to <code>queue.defer</code>, for example.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-        <th>Argument</th>
         
 
         
@@ -568,7 +456,7 @@ to this function. This allows this function to be passed to <code>queue.defer</c
             <td class="type">
             
                 
-<span class="param-type"><a href="MultiLoader.html#~dataCallback">MultiLoader~dataCallback</a></span>
+<span class="param-type"><a href="DatumRangeFinder.html#~dataCallback">DatumRangeFinder~dataCallback</a></span>
 
 
 
@@ -576,21 +464,10 @@ to this function. This allows this function to be passed to <code>queue.defer</c
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>a callback function to use; either this argument must be provided
-                             or the function must have already been configured via  <a href="MultiLoader.html#callback"><code>MultiLoader#callback</code></a></p></td>
+            <td class="description last"><p>the callback function to invoke</p></td>
         </tr>
 
     
@@ -653,10 +530,6 @@ to this function. This allows this function to be passed to <code>queue.defer</c
     <h5>Returns:</h5>
     
             
-<div class="param-desc">
-    <p>this object</p>
-</div>
-
 
 
 <dl>
@@ -665,7 +538,7 @@ to this function. This allows this function to be passed to <code>queue.defer</c
     </dt>
     <dd>
         
-<span class="param-type"><a href="MultiLoader.html">MultiLoader</a></span>
+<span class="param-type">void</span>
 
 
 
@@ -773,7 +646,7 @@ to this function. This allows this function to be passed to <code>queue.defer</c
             <td class="type">
             
                 
-<span class="param-type">Array.&lt;Object></span>
+<span class="param-type"><a href="global.html#DatumRange">DatumRange</a></span>
 
 
 
@@ -792,7 +665,7 @@ to this function. This allows this function to be passed to <code>queue.defer</c
 
             
 
-            <td class="description last"><p>the result data from all loaders</p></td>
+            <td class="description last"><p>the result data</p></td>
         </tr>
 
     
@@ -904,7 +777,7 @@ to this function. This allows this function to be passed to <code>queue.defer</c
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4-dev</a>
 	
-		on 2017-08-14T10:31:05+12:00
+		on 2017-08-17T09:11:46+12:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>

@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>SolarNetwork Datum Loader Interface: Loader</title>
+	<title>SolarNetwork Datum Loader Global</title>
 
 	<!--[if lt IE 9]>
 	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,7 +33,7 @@
 			<li class="dropdown">
 				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
 				<ul class="dropdown-menu ">
-					<li><a href="DatumLoader.html">DatumLoader</a></li><li><a href="MultiLoader.html">MultiLoader</a></li>
+					<li><a href="DatumLoader.html">DatumLoader</a></li><li><a href="DatumRangeFinder.html">DatumRangeFinder</a></li><li><a href="DatumSourceFinder.html">DatumSourceFinder</a></li><li><a href="JsonClientSupport.html">JsonClientSupport</a></li><li><a href="MultiLoader.html">MultiLoader</a></li>
 				</ul>
 			</li>
 			
@@ -79,13 +79,13 @@
 		<div id="main">
 			
 
-	<h1 class="page-title">Interface: Loader</h1>
+	<h1 class="page-title">Global</h1>
 <section>
 
 <header>
     
         <h2>
-        Loader
+        
         </h2>
         
     
@@ -96,8 +96,6 @@
     <div class="container-overview">
     
         
-            <div class="description"><p>Interface for classes that can be used to load data for <a href="MultiLoader.html"><code>MultiLoader</code></a>.</p></div>
-        
 
         
 <dl class="details">
@@ -155,162 +153,6 @@
 
     
 
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        <dl>
-            
-<hr>
-<dt>
-    <h4 class="name" id="load"><span class="type-signature"></span>load(callback)</h4>
-    
-    
-</dt>
-<dd>
-
-    
-    <div class="description">
-        <p>Load data asynchronously with a callback.</p>
-    </div>
-    
-
-    
-
-    
-
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params table table-striped">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>callback</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type"><a href="Loader.html#~dataCallback">Loader~dataCallback</a></span>
-
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>the callback to invoke with the results</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-    
-
-    
-<dl class="details">
-    
-
-	
-
-	
-
-	
-
-    
-
-    
-
-    
-
-    
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
-
-	
-
-	
-
-	
-
-	
-</dl>
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <h5>Returns:</h5>
-    
-            
-<div class="param-desc">
-    <p>the loader object</p>
-</div>
-
-
-
-<dl>
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type"><a href="Loader.html">Loader</a></span>
-
-
-
-    </dd>
-</dl>
-
-
-        
-
-    
-</dd>
-
-        </dl>
     
 
     
@@ -319,29 +161,36 @@
         <dl>
                 
 <hr>
-<dt>
-    <h4 class="name" id="~dataCallback"><span class="type-signature"></span>dataCallback( [error], data)</h4>
-    
+<dt class="name" id="Datum">
+    <h4 id="Datum">Datum</h4>
+
     
 </dt>
 <dd>
-
-    
-    <div class="description">
-        <p>The loader callback function.</p>
-    </div>
     
 
     
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
 
+
+
+            </li>
+        </ul>
     
 
     
+<dl class="details">
     
-        <h5>Parameters:</h5>
-        
 
-<table class="params table table-striped">
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
     <thead>
     <tr>
         
@@ -350,8 +199,6 @@
 
         <th>Type</th>
 
-        
-        <th>Argument</th>
         
 
         
@@ -365,13 +212,13 @@
 
         <tr>
             
-                <td class="name"><code>error</code></td>
+                <td class="name"><code>created</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Error</span>
+<span class="param-type">string</span>
 
 
 
@@ -379,33 +226,23 @@
             </td>
 
             
-                <td class="attributes">
-                
-                    &lt;optional><br>
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>an error if a failure occurred</p></td>
+            <td class="description last"><p>the datum date</p></td>
         </tr>
 
     
 
         <tr>
             
-                <td class="name"><code>data</code></td>
+                <td class="name"><code>sourceId</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Object</span>
+<span class="param-type">string</span>
 
 
 
@@ -413,28 +250,17 @@
             </td>
 
             
-                <td class="attributes">
-                
-
-                
-
-                
-                </td>
-            
 
             
 
-            <td class="description last"><p>the result data</p></td>
+            <td class="description last"><p>the control ID</p></td>
         </tr>
 
     
     </tbody>
 </table>
+</dl>
 
-    
-
-    
-<dl class="details">
     
 
 	
@@ -474,6 +300,190 @@
 
 
     
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id="DatumRange">
+    <h4 id="DatumRange">DatumRange</h4>
+
+    
+</dt>
+<dd>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>timeZone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the local time zone of the node</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>startDateMillis</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the start of the time range, in milliseconds since the epoch</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>endDateMillis</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the end of the time range, in milliseconds since the epoch</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the start of the time range</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>eDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the end of the time range</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
 
     
 
@@ -483,7 +493,27 @@
 
     
 
-    
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
 
     
 </dd>
@@ -536,7 +566,7 @@
 <span class="jsdoc-message">
 	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.4-dev</a>
 	
-		on 2017-08-14T10:31:05+12:00
+		on 2017-08-17T09:11:46+12:00
 	
 	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
 </span>
