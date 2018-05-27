@@ -1,0 +1,1186 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SolarNetwork Core Module: util</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">SolarNetwork Core</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-data.html">data</a></li><li><a href="module-domain.html">domain</a></li><li><a href="module-format.html">format</a></li><li><a href="module-net.html">net</a></li><li><a href="module-util.html">util</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Logger.html">Logger</a></li><li><a href="module-domain-Aggregation.html">domain~Aggregation</a></li><li><a href="module-domain-AuthTokenStatus.html">domain~AuthTokenStatus</a></li><li><a href="module-domain-AuthTokenType.html">domain~AuthTokenType</a></li><li><a href="module-domain-CombiningType.html">domain~CombiningType</a></li><li><a href="module-domain-DatumFilter.html">domain~DatumFilter</a></li><li><a href="module-domain-GeneralMetadata.html">domain~GeneralMetadata</a></li><li><a href="module-domain-InstructionState.html">domain~InstructionState</a></li><li><a href="module-domain-Location.html">domain~Location</a></li><li><a href="module-domain-LocationPrecision.html">domain~LocationPrecision</a></li><li><a href="module-domain-Pagination.html">domain~Pagination</a></li><li><a href="module-domain-SecurityPolicy.html">domain~SecurityPolicy</a></li><li><a href="module-domain-SecurityPolicyBuilder.html">domain~SecurityPolicyBuilder</a></li><li><a href="module-domain-SortDescriptor.html">domain~SortDescriptor</a></li><li><a href="module-domain-UserMetadataFilter.html">domain~UserMetadataFilter</a></li><li><a href="module-net-AuthorizationV2Builder.html">net~AuthorizationV2Builder</a></li><li><a href="module-net-Environment.html">net~Environment</a></li><li><a href="module-net-HttpHeaders.html">net~HttpHeaders</a></li><li><a href="module-net-LocationDatumMetadataUrlHelper.html">net~LocationDatumMetadataUrlHelper</a></li><li><a href="module-net-LocationDatumUrlHelper.html">net~LocationDatumUrlHelper</a></li><li><a href="module-net-NodeDatumMetadataUrlHelper.html">net~NodeDatumMetadataUrlHelper</a></li><li><a href="module-net-NodeDatumUrlHelper.html">net~NodeDatumUrlHelper</a></li><li><a href="module-net-NodeInstructionUrlHelper.html">net~NodeInstructionUrlHelper</a></li><li><a href="module-net-NodeMetadataUrlHelper.html">net~NodeMetadataUrlHelper</a></li><li><a href="module-net-UrlHelper.html">net~UrlHelper</a></li><li><a href="module-net-UserAuthTokenUrlHelper.html">net~UserAuthTokenUrlHelper</a></li><li><a href="module-net-UserMetadataUrlHelper.html">net~UserMetadataUrlHelper</a></li><li><a href="module-util-ComparableEnum.html">util~ComparableEnum</a></li><li><a href="module-util-Configuration.html">util~Configuration</a></li><li><a href="module-util-Enum.html">util~Enum</a></li><li><a href="module-util-MultiMap.html">util~MultiMap</a></li><li><a href="module-util-PropMap.html">util~PropMap</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-net-LocationDatumMetadataUrlHelperMixin.html">net~LocationDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-LocationDatumUrlHelperMixin.html">net~LocationDatumUrlHelperMixin</a></li><li><a href="module-net-LocationUrlHelperMixin.html">net~LocationUrlHelperMixin</a></li><li><a href="module-net-NodeDatumMetadataUrlHelperMixin.html">net~NodeDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeDatumUrlHelperMixin.html">net~NodeDatumUrlHelperMixin</a></li><li><a href="module-net-NodeInstructionUrlHelperMixin.html">net~NodeInstructionUrlHelperMixin</a></li><li><a href="module-net-NodeMetadataUrlHelperMixin.html">net~NodeMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeUrlHelperMixin.html">net~NodeUrlHelperMixin</a></li><li><a href="module-net-QueryUrlHelperMixin.html">net~QueryUrlHelperMixin</a></li><li><a href="module-net-UserAuthTokenUrlHelperMixin.html">net~UserAuthTokenUrlHelperMixin</a></li><li><a href="module-net-UserMetadataUrlHelperMixin.html">net~UserMetadataUrlHelperMixin</a></li><li><a href="module-net-UserUrlHelperMixin.html">net~UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="global.html" class="dropdown-toggle" data-toggle="dropdown">Global<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="global.html#groupedBySourceMetricDataArray">groupedBySourceMetricDataArray</a></li><li><a href="global.html#idMapQueryParameterValue">idMapQueryParameterValue</a></li><li><a href="global.html#timeNormalizeDataArray">timeNormalizeDataArray</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Module: util</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-util-ComparableEnum.html">ComparableEnum</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-Configuration.html">Configuration</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-Enum.html">Enum</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-MultiMap.html">MultiMap</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-PropMap.html">PropMap</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="~datumDate"><span class="type-signature">&lt;inner> </span>datumDate(d)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get a date associated with a &quot;datum&quot; style object.</p>
+<p>This function will return a <code>Date</code> instance found via a property on <code>d</code> according to these rules:</p>
+<ol>
+<li><code>date</code> - assumed to be a <code>Date</code> object already and returned directly</li>
+<li><code>localDate</code> - a string in <code>yyyy-MM-dd</code> form, optionally with a string
+<code>localTime</code> property for an associated time in <code>HH:mm</code> form, treated as UTC</li>
+<li><code>created</code> - a string in <code>yyyy-MM-dd HH:mm:ss.SSS'Z'</code> or <code>yyyy-MM-dd'T'HH:mm:ss.SSS'Z'</code> form</li>
+</ol>
+<p>These properties are commonly returned in results from the SolarNetwork API, and thus
+this method is a handy way to get the dates for those objects.</p>
+<p><strong>Note</strong> that the <code>localDate</code> and <code>localTime</code> values are parsed as UTC. When formatted the
+date for display they should be formatted in UTC as well to preserve the expected value.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>d</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the datum object to extract a date from</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the extracted date, or <code>null</code> if no date could be extracted</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Date</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~rollingQueryDateRange"><span class="type-signature">&lt;inner> </span>rollingQueryDateRange(aggregate, aggregateTimeCount [, endDate])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Get a query range appropriate for a given aggregate level.</p>
+<p>Returns an object with <code>start</code> and <code>end</code> Date properties, using the given <code>endDate</code>
+parameter as the basis for calculating the start as an offset backwards in time
+based on the given <code>aggregate</code> level.</p>
+<p>When <code>aggregateTimeCount</code> will be treated as a &quot;next higher&quot; aggregate level from
+<code>aggregate</code>, like this:</p>
+<ul>
+<li>&lt; <code>Hour</code>: <code>numHours</code></li>
+<li><code>Hour</code> : <code>numDays</code></li>
+<li><code>Day</code> : <code>numMonths</code></li>
+<li><code>Month</code> : <code>numYears</code></li>
+</ul>
+<p>For example, you might like to render a chart using <code>TenMinute</code> aggregate data for the 
+last 24 hours. You'd call this function like this:</p>
+<pre class="prettyprint source"><code>const range = rollingQueryDateRange(Aggregates.TenMinute, 24);
+
+// or, passing a DateRangeConfiguration
+const range = rollingQueryDateRange(Aggregates.TenMinute, {numHours:24});</code></pre>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>aggregate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the aggregate level to get a query range for</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aggregateTimeCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+|
+
+<span class="param-type"><a href="module-util.html#~DateRangeConfiguration">module:util~DateRangeConfiguration</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the number of aggregate time units to use</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>endDate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the ending date; if not provided the current date will be used</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>the calculated date range</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-util.html#~DateRange">module:util~DateRange</a></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+<hr>
+<dt class="name" id="~DateRange">
+    <h4 id="~DateRange">DateRange</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An object that defines a date range.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>start</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the starting date</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>end</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Date</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the ending date</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timeUnit</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the time unit used by the date range</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>timeCount</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the number of time units in the date range</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aggregate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the aggregate to query with</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            
+                
+<hr>
+<dt class="name" id="~DateRangeConfiguration">
+    <h4 id="~DateRangeConfiguration">DateRangeConfiguration</h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>An object that defines levels of date range configuration.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type">Object</span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>numHours</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the number of hours to use</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>numDays</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the number of days to use</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>numMonths</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the number of months to use</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>numYears</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">number</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the number of years to use</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+            </dl>
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	
+		on 2018-05-28T10:53:56+12:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
