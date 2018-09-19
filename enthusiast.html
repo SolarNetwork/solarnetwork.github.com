@@ -5,58 +5,54 @@ nav-selection: enthusiast
 ---
 <section>
 	<h1>SolarNetwork for enthusiasts.</h1>
-	
-	<p>SolarNetwork is still being actively developed, and is currently in a
-	limited beta-test phase of the project. You can use this page to learn how
-	to configure a SolarNode, but to actually post data into SolarNet you'll 
-	need an official account. You can request an account by flicking an email 
-	to <a href="mailto:beta@solarnetwork.net">beta@solarnetwork.net</a>.</p>
-	
-	<p>All that being said, this page will tell you all you need to know to get started 
-	creating your own SolarNode.</p>
-	
+
+	<p>SolarNetwork is hosted by the <a href="https://solarnetwork.org.nz/">SolarNetwork
+	Foundation</a> (SNF), a registered charity in New Zealand. To get started, hop over to
+	<a href="https://data.solarnetwork.net/solaruser/">SolarUser</a> and create an account.
+	SolarNetwork is free for personal use and development testing.
+	For other use, SNF offers a very reasonable pricing plan based on the amount of data
+	you collect. Flick an email to <a href="mailto:info@solarnetwork.net">info@solarnetwork.net</a>
+	for more information.</p>
+
+	<p>All that being said, this page will tell you all you need to know to get started
+	with your own SolarNode.</p>
+
 	<h2>Before you begin</h2>
-	
+
 	<p>Check out the <a href="https://github.com/SolarNetwork/solarnetwork/wiki/Node-Supported-Devices">
 	node supported devices</a> page to see what devices SolarNetwork can talk to.
-	Don't see something you wish was supported? Submit a <a href="https://github.com/SolarNetwork/solarnetwork/issues">feature
-	request</a> or better yet become a <a href="developers.html">developer</a> and 
+	Don't see something you wish was supported? Submit a <a href="https://data.solarnetwork.net/jira/">feature
+	request</a> or better yet become a <a href="developers.html">developer</a> and
 	contribute the support yourself (you'll be helping make the world a better place)!</p>
-	
+
 	<h2>Choose your SolarNode hardware</h2>
-	 
-	<p>The SolarNode hardware has three basic requirements:</p>
-	
+
+	<p>Currently the <a href="https://www.raspberrypi.org/">Raspberry Pi</a> is the best
+	supported hardware for a SolarNode. We have complete OS images with SolarNode pre-installed;
+	you just copy the image to a SD card and power on the device to have a fully functional
+	SolarNode. See the <a href="https://github.com/SolarNetwork/solarnetwork/wiki/Node-Prebuilt-Images">SolarNode Prebuilt OS Images</a>
+	page to get started.</p>
+
+	<h3>Roll your own SolarNode</h3>
+
+	<p>If you'd like to deploy SolarNode onto your own device, SolarNode has three basic requirements:</p>
+
 	<ol>
-		<li><p>The SolarNode application is written in Java, and requires a minimum of a 
-			Java 6 runtime environment. Thus your SolarNode can be any hardware that 
-			supports Java 6.</p></li>
-		<li><p>Beyond that the SolarNode needs ways to talk to the devices you want to 
+		<li><p>The SolarNode application is written in Java, and requires a minimum of a
+			Java 8 runtime environment. Thus your SolarNode can be any hardware that
+			supports Java 8.</p></li>
+		<li><p>Beyond that the SolarNode needs ways to talk to the devices you want to
 			monitor or control, for example: serial ports, USB ports, or WiFi.</p></li>
-		<li><p>The SolarNode needs internet connectivity to  be able to post the data 
-			up to SolarNet, for example: ethernet or WiFi connection to your home 
+		<li><p>The SolarNode needs internet connectivity to  be able to post the data
+			up to SolarNet, for example: ethernet or WiFi connection to your home
 			network, 3G mobile via USB stick, etc.</p></li>
 	</ol>
-	
-	<p>We've had good success with the 
-	<a href="http://www.norhtec.com/products/mcjrmx/index.html">JrMX</a> box 
-	(see our page describing <a href="https://github.com/SolarNetwork/solarnetwork/wiki/Node-OS-Setup-Guide-Debian-6">how 
-	to set up a full Debian Linux OS</a> on a JrMX), but have deployed SolarNodes on devices ranging from the
-	<a href="http://www.embeddedarm.com/products/board-detail.php?product=TS-7260">TS-7260</a>
-	to the <a href="http://www.designa-electronics.com/index.php/products/snapper-single-board-computers">Snapper 9260</a>.</p>
-	
-	<h2>Install the SolarNode platform</h2>
-	
-	<p>See the <a href="http://sourceforge.net/projects/solarnetwork/files/node-framework/">SolarNode
-	framework packages</a> page for downloadable packages (take care to read the <strong>README</strong>
-	on that page). You'll need to download a <em>base node</em> package
-	along with any other specific packages required by the devices you want to monitor.</p>
-	
+
 	<h2>SolarKiosk &mdash; showcase your SolarNode</h2>
-	
-	<p>The SolarNet service provides many easy ways to visualize your data using just a web 
+
+	<p>The SolarNet service provides many easy ways to visualize your data using just a web
 	browser. If you'd like to build a kiosk, for example to display information about your
-	SolarNode on a lobby TV screen, see the <a href="http://sourceforge.net/projects/solarnetwork/files/solarkiosk/">SolarKiosk image</a> page for some
-	example kiosk disk images.</p>
-	
+	SolarNode on a lobby TV screen, see the <a href="https://sourceforge.net/projects/solarnetwork/files/solarkiosk/">SolarKiosk image</a>
+	page for some example kiosk disk images.</p>
+
 </section>
