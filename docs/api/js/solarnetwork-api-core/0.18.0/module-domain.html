@@ -1,0 +1,3340 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SolarNetwork Core Module: domain</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">SolarNetwork Core</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-data.html">data</a></li><li><a href="module-domain.html">domain</a></li><li><a href="module-format.html">format</a></li><li><a href="module-net.html">net</a></li><li><a href="module-util.html">util</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Logger.html">Logger</a></li><li><a href="module-domain-Aggregation.html">domain~Aggregation</a></li><li><a href="module-domain-AuthTokenStatus.html">domain~AuthTokenStatus</a></li><li><a href="module-domain-AuthTokenType.html">domain~AuthTokenType</a></li><li><a href="module-domain-CombiningType.html">domain~CombiningType</a></li><li><a href="module-domain-DatumAuxiliaryType.html">domain~DatumAuxiliaryType</a></li><li><a href="module-domain-DatumFilter.html">domain~DatumFilter</a></li><li><a href="module-domain-DatumReadingType.html">domain~DatumReadingType</a></li><li><a href="module-domain-DeviceOperatingState.html">domain~DeviceOperatingState</a></li><li><a href="module-domain-GeneralMetadata.html">domain~GeneralMetadata</a></li><li><a href="module-domain-InstructionState.html">domain~InstructionState</a></li><li><a href="module-domain-Location.html">domain~Location</a></li><li><a href="module-domain-LocationPrecision.html">domain~LocationPrecision</a></li><li><a href="module-domain-Pagination.html">domain~Pagination</a></li><li><a href="module-domain-SecurityPolicy.html">domain~SecurityPolicy</a></li><li><a href="module-domain-SecurityPolicyBuilder.html">domain~SecurityPolicyBuilder</a></li><li><a href="module-domain-SkyCondition.html">domain~SkyCondition</a></li><li><a href="module-domain-SortDescriptor.html">domain~SortDescriptor</a></li><li><a href="module-domain-UserMetadataFilter.html">domain~UserMetadataFilter</a></li><li><a href="module-net-AuthorizationV2Builder.html">net~AuthorizationV2Builder</a></li><li><a href="module-net-Environment.html">net~Environment</a></li><li><a href="module-net-HttpHeaders.html">net~HttpHeaders</a></li><li><a href="module-net-LocationDatumMetadataUrlHelper.html">net~LocationDatumMetadataUrlHelper</a></li><li><a href="module-net-LocationDatumUrlHelper.html">net~LocationDatumUrlHelper</a></li><li><a href="module-net-NodeDatumMetadataUrlHelper.html">net~NodeDatumMetadataUrlHelper</a></li><li><a href="module-net-NodeDatumUrlHelper.html">net~NodeDatumUrlHelper</a></li><li><a href="module-net-NodeInstructionUrlHelper.html">net~NodeInstructionUrlHelper</a></li><li><a href="module-net-NodeMetadataUrlHelper.html">net~NodeMetadataUrlHelper</a></li><li><a href="module-net-UrlHelper.html">net~UrlHelper</a></li><li><a href="module-net-UserAuthTokenUrlHelper.html">net~UserAuthTokenUrlHelper</a></li><li><a href="module-net-UserDatumAuxiliaryUrlHelper.html">net~UserDatumAuxiliaryUrlHelper</a></li><li><a href="module-net-UserMetadataUrlHelper.html">net~UserMetadataUrlHelper</a></li><li><a href="module-util-BitmaskEnum.html">util~BitmaskEnum</a></li><li><a href="module-util-ComparableEnum.html">util~ComparableEnum</a></li><li><a href="module-util-Configuration.html">util~Configuration</a></li><li><a href="module-util-Enum.html">util~Enum</a></li><li><a href="module-util-MultiMap.html">util~MultiMap</a></li><li><a href="module-util-PropMap.html">util~PropMap</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-net-AuthTokenUrlHelperMixin.html">net~AuthTokenUrlHelperMixin</a></li><li><a href="module-net-LocationDatumMetadataUrlHelperMixin.html">net~LocationDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-LocationDatumUrlHelperMixin.html">net~LocationDatumUrlHelperMixin</a></li><li><a href="module-net-LocationUrlHelperMixin.html">net~LocationUrlHelperMixin</a></li><li><a href="module-net-NodeDatumMetadataUrlHelperMixin.html">net~NodeDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeDatumUrlHelperMixin.html">net~NodeDatumUrlHelperMixin</a></li><li><a href="module-net-NodeInstructionUrlHelperMixin.html">net~NodeInstructionUrlHelperMixin</a></li><li><a href="module-net-NodeMetadataUrlHelperMixin.html">net~NodeMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeUrlHelperMixin.html">net~NodeUrlHelperMixin</a></li><li><a href="module-net-QueryUrlHelperMixin.html">net~QueryUrlHelperMixin</a></li><li><a href="module-net-UserAuthTokenUrlHelperMixin.html">net~UserAuthTokenUrlHelperMixin</a></li><li><a href="module-net-UserDatumAuxiliaryUrlHelperMixin.html">net~UserDatumAuxiliaryUrlHelperMixin</a></li><li><a href="module-net-UserMetadataUrlHelperMixin.html">net~UserMetadataUrlHelperMixin</a></li><li><a href="module-net-UserUrlHelperMixin.html">net~UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Module: domain</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="module-domain-Aggregation.html">Aggregation</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-AuthTokenStatus.html">AuthTokenStatus</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-AuthTokenType.html">AuthTokenType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-CombiningType.html">CombiningType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DatumAuxiliaryType.html">DatumAuxiliaryType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DatumFilter.html">DatumFilter</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DatumReadingType.html">DatumReadingType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DeviceOperatingState.html">DeviceOperatingState</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-GeneralMetadata.html">GeneralMetadata</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-InstructionState.html">InstructionState</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-Location.html">Location</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-LocationPrecision.html">LocationPrecision</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-Pagination.html">Pagination</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SecurityPolicy.html">SecurityPolicy</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SkyCondition.html">SkyCondition</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SortDescriptor.html">SortDescriptor</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-UserMetadataFilter.html">UserMetadataFilter</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Members</h3>
+
+        <dl>
+            
+<hr>
+<dt class="name" id="~Aggregations">
+    <h4 id="~Aggregations"><span class="type-signature">&lt;inner, constant> </span>Aggregations<span class="type-signature"> :<a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported Aggregation values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Minute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>minute</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FiveMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>5 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TenMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>10 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>FifeteenMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>15 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ThirtyMinute</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>30 minutes</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Hour</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an hour</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>HourOfDay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an hour of a day, e.g. 1-24</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SeasonalHourOfDay</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an hour of a day, further grouped into 4 seasons</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Day</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a day</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>DayOfWeek</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a day of the week, e.g. Monday - Sunday</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SeasonalDayOfWeek</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a day of the week, further grouped into 4 seasons</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Week</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a week</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>WeekOfYear</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the week within a year, e.g. 1 - 52</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Month</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a month</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Year</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a year</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>RunningTotal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a complete running total over a time span</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~AuthTokenStatuses">
+    <h4 id="~AuthTokenStatuses"><span class="type-signature">&lt;inner, constant> </span>AuthTokenStatuses<span class="type-signature"> :<a href="module-domain-AuthTokenStatus.html">module:domain~AuthTokenStatus</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported AuthTokenStatus values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-AuthTokenStatus.html">module:domain~AuthTokenStatus</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Active</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-AuthTokenStatus.html">module:domain~AuthTokenStatus</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the token is active and usable</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Disabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-AuthTokenStatus.html">module:domain~AuthTokenStatus</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the token is disabled and not usable</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~AuthTokenTypes">
+    <h4 id="~AuthTokenTypes"><span class="type-signature">&lt;inner, constant> </span>AuthTokenTypes<span class="type-signature"> :<a href="module-domain-AuthTokenType.html">module:domain~AuthTokenType</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported AuthTokenType values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-AuthTokenType.html">module:domain~AuthTokenType</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>ReadNodeData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-AuthTokenType.html">module:domain~AuthTokenType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a read-only token for reading SolarNode data</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>User</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-AuthTokenType.html">module:domain~AuthTokenType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>full access as the user that owns the token</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~CombiningTypes">
+    <h4 id="~CombiningTypes"><span class="type-signature">&lt;inner, constant> </span>CombiningTypes<span class="type-signature"> :<a href="module-domain-CombiningType.html">module:domain~CombiningType</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported CombiningType values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-CombiningType.html">module:domain~CombiningType</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Average</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-CombiningType.html">module:domain~CombiningType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>average</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Sum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-CombiningType.html">module:domain~CombiningType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>sum</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~DatumAuxiliaryTypes">
+    <h4 id="~DatumAuxiliaryTypes"><span class="type-signature">&lt;inner, constant> </span>DatumAuxiliaryTypes<span class="type-signature"> :<a href="module-domain-DatumAuxiliaryType.html">module:domain~DatumAuxiliaryType</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported DatumAuxiliaryType values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-DatumAuxiliaryType.html">module:domain~DatumAuxiliaryType</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Reset</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DatumAuxiliaryType.html">module:domain~DatumAuxiliaryType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>reset</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~DatumReadingTypes">
+    <h4 id="~DatumReadingTypes"><span class="type-signature">&lt;inner, constant> </span>DatumReadingTypes<span class="type-signature"> :<a href="module-domain-DatumReadingType.html">module:domain~DatumReadingType</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported <code>DatumReadingType</code> values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-DatumReadingType.html">module:domain~DatumReadingType</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>CalculatedAt</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DatumReadingType.html">module:domain~DatumReadingType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Derive a single reading value based
+from one datum the nearest before a specific time and one the nearest after.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>CalculatedAtDifference</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DatumReadingType.html">module:domain~DatumReadingType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Calculate the difference
+between two reading values on two dates, using the <code>CalcualtedAt</code> style of deriving the start
+and end readings.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Difference</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DatumReadingType.html">module:domain~DatumReadingType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Find the difference between two datum
+that occurs between two dates, without any limits on how near to those dates the datum are.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>NearestDifference</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DatumReadingType.html">module:domain~DatumReadingType</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Find the difference between two
+datum that are nearest in time on or before two dates.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~DeviceOperatingStates">
+    <h4 id="~DeviceOperatingStates"><span class="type-signature">&lt;inner, constant> </span>DeviceOperatingStates<span class="type-signature"> :<a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported DeviceOperatingState values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Unknown</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an unknown state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Normal</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>normal operating state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Starting</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a startup/initializing state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Standby</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a standby/low power mode</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Shutdown</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a shutdown/off state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Fault</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a faulty or error condition</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Disabled</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a disabled state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Recovery</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a recovery state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Override</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-DeviceOperatingState.html">module:domain~DeviceOperatingState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a manual or overridden state</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~InstructionStates">
+    <h4 id="~InstructionStates"><span class="type-signature">&lt;inner, constant> </span>InstructionStates<span class="type-signature"> :<a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported InstructionState values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Unknown</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>an unknown state</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Queued</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the instruction has been received by SolarNet but not yet delivered to its destination</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Received</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the instruction has been delivered to its destination but not yet acted upon</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Executed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the instruction is currently being acted upon</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Declined</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the destination has declined to execute the instruction, or the execution failed</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Completed</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-InstructionState.html">module:domain~InstructionState</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the destination has executed successfully</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~LocationPrecisions">
+    <h4 id="~LocationPrecisions"><span class="type-signature">&lt;inner, constant> </span>LocationPrecisions<span class="type-signature"> :<a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported LocationPrecision values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>LatLong</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>GPS coordinates</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Block</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a city block</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Street</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a street</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>PostalCode</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a postal code (or &quot;zip code&quot;)</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Locality</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a town or city</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>StateOrProvince</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a state or province</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Region</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a large region</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>TimeZone</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a time zone</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Country</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-LocationPrecision.html">module:domain~LocationPrecision</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a country</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt class="name" id="~SkyConditions">
+    <h4 id="~SkyConditions"><span class="type-signature">&lt;inner, constant> </span>SkyConditions<span class="type-signature"> :<a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span></h4>
+
+    
+</dt>
+<dd>
+    
+    <div class="description">
+        <p>The enumeration of supported SkyCondition values.</p>
+    </div>
+    
+
+    
+        <h5>Type:</h5>
+        <ul>
+            <li>
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            </li>
+        </ul>
+    
+
+    
+<dl class="details">
+    
+
+    <h5 class="subsection-title">Properties:</h5>
+
+    <dl>
+
+<table class="props table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>Clear</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>clear sky</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ScatteredClouds</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>scattered/few clouds</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Fog</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>fog</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Drizzle</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>drizzle, light rain</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ScatteredShowers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>scattered/few showers</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Showers</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>showers, light rain</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Rain</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>rain</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Hail</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>hail</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>ScatteredSnow</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>scattered/light snow</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Snow</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>snow</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Storm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>storm</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>SevereStorm</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>severe storm</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Thunder</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>thunder, lightning</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Windy</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>windy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Hazy</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>hazy</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Tornado</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>tornado</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Hurricane</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>hurrican</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>Dusty</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-SkyCondition.html">module:domain~SkyCondition</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>dusty</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+</dl>
+
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="~objectToStringMap"><span class="type-signature">&lt;inner> </span>objectToStringMap(obj)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Convert a simple object into a <code>Map</code> instance.</p>
+<p>Property values that are themselves objects will be converted into <code>Map</code>
+instances as well.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a simple object</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li><a href="module-domain.html#~stringMapToObject">module:domain~stringMapToObject</a> for the reverse conversion</li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a Map with string keys; nested Map objects are also handled</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Map.&lt;string, *></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~stringMapToObject"><span class="type-signature">&lt;inner> </span>stringMapToObject(strMap)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Convert a <code>Map</code> into a simple object.</p>
+<p>The keys are assumed to be strings. Values that are themselves <code>Map</code> instances
+will be converted to simple objects as well.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>strMap</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map.&lt;string, *></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>a Map with string keys; nested Map objects are also handled</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+	<dt class="tag-see method-doc-label method-doc-details-label">See:</dt>
+	<dd class="tag-see">
+		<ul>
+			<li>objectToStringMap for the reverse conversion</li>
+			</ul>
+	</dd>
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>a simple object</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">object</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a>
+	
+		on 2019-06-10T11:16:40+12:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
