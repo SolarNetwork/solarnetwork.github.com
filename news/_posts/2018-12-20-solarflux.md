@@ -15,13 +15,14 @@ See the [SolarFlux wiki docs][api-docs] for more information.
 
 ## Demo
 
-We've put together a simple demo application to show how it works. This is a web application that
-shows how you can use JavaScript to connect to SolarFlux and show real-time data published by any
-nodes you have authorization to.
+We've put together a simple [demo application][solarflux-demo] to show how it works. This is a web
+application that shows how you can use JavaScript to connect to SolarFlux and show real-time data
+published by any nodes you have authorization to.
 
 ![SolarFlux demo application screen shot]({{site.baseurl}}/images/news/solarflux-demo-ui.png)
 
 [api-docs]: https://github.com/SolarNetwork/solarnetwork/wiki/SolarFlux-API
 [mqtt]: http://mqtt.org/
+[solarflux-demo]: https://data.solarnetwork.net/dev/flux/
 [solarflux-upload]: https://github.com/SolarNetwork/solarnetwork-node/tree/master/net.solarnetwork.node.upload.flux
 [websocket]: https://en.wikipedia.org/wiki/WebSocket
