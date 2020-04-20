@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SolarNetwork Core Classes</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">SolarNetwork Core</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-data.html">data</a></li><li><a href="module-domain.html">domain</a></li><li><a href="module-format.html">format</a></li><li><a href="module-net.html">net</a></li><li><a href="module-util.html">util</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Logger.html">Logger</a></li><li><a href="module-domain-Aggregation.html">domain~Aggregation</a></li><li><a href="module-domain-AuthTokenStatus.html">domain~AuthTokenStatus</a></li><li><a href="module-domain-AuthTokenType.html">domain~AuthTokenType</a></li><li><a href="module-domain-CombiningType.html">domain~CombiningType</a></li><li><a href="module-domain-DatumAuxiliaryType.html">domain~DatumAuxiliaryType</a></li><li><a href="module-domain-DatumFilter.html">domain~DatumFilter</a></li><li><a href="module-domain-DatumReadingType.html">domain~DatumReadingType</a></li><li><a href="module-domain-DeviceOperatingState.html">domain~DeviceOperatingState</a></li><li><a href="module-domain-GeneralMetadata.html">domain~GeneralMetadata</a></li><li><a href="module-domain-InstructionState.html">domain~InstructionState</a></li><li><a href="module-domain-Location.html">domain~Location</a></li><li><a href="module-domain-LocationPrecision.html">domain~LocationPrecision</a></li><li><a href="module-domain-Pagination.html">domain~Pagination</a></li><li><a href="module-domain-SecurityPolicy.html">domain~SecurityPolicy</a></li><li><a href="module-domain-SecurityPolicyBuilder.html">domain~SecurityPolicyBuilder</a></li><li><a href="module-domain-SkyCondition.html">domain~SkyCondition</a></li><li><a href="module-domain-SortDescriptor.html">domain~SortDescriptor</a></li><li><a href="module-domain-UserMetadataFilter.html">domain~UserMetadataFilter</a></li><li><a href="module-net-AuthorizationV2Builder.html">net~AuthorizationV2Builder</a></li><li><a href="module-net-Environment.html">net~Environment</a></li><li><a href="module-net-HttpHeaders.html">net~HttpHeaders</a></li><li><a href="module-net-LocationDatumMetadataUrlHelper.html">net~LocationDatumMetadataUrlHelper</a></li><li><a href="module-net-LocationDatumUrlHelper.html">net~LocationDatumUrlHelper</a></li><li><a href="module-net-NodeDatumMetadataUrlHelper.html">net~NodeDatumMetadataUrlHelper</a></li><li><a href="module-net-NodeDatumUrlHelper.html">net~NodeDatumUrlHelper</a></li><li><a href="module-net-NodeInstructionUrlHelper.html">net~NodeInstructionUrlHelper</a></li><li><a href="module-net-NodeMetadataUrlHelper.html">net~NodeMetadataUrlHelper</a></li><li><a href="module-net-UrlHelper.html">net~UrlHelper</a></li><li><a href="module-net-UserAuthTokenUrlHelper.html">net~UserAuthTokenUrlHelper</a></li><li><a href="module-net-UserDatumAuxiliaryUrlHelper.html">net~UserDatumAuxiliaryUrlHelper</a></li><li><a href="module-net-UserMetadataUrlHelper.html">net~UserMetadataUrlHelper</a></li><li><a href="module-util-BitmaskEnum.html">util~BitmaskEnum</a></li><li><a href="module-util-ComparableEnum.html">util~ComparableEnum</a></li><li><a href="module-util-Configuration.html">util~Configuration</a></li><li><a href="module-util-Enum.html">util~Enum</a></li><li><a href="module-util-MultiMap.html">util~MultiMap</a></li><li><a href="module-util-PropMap.html">util~PropMap</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-net-AuthTokenUrlHelperMixin.html">net~AuthTokenUrlHelperMixin</a></li><li><a href="module-net-LocationDatumMetadataUrlHelperMixin.html">net~LocationDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-LocationDatumUrlHelperMixin.html">net~LocationDatumUrlHelperMixin</a></li><li><a href="module-net-LocationUrlHelperMixin.html">net~LocationUrlHelperMixin</a></li><li><a href="module-net-NodeDatumMetadataUrlHelperMixin.html">net~NodeDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeDatumUrlHelperMixin.html">net~NodeDatumUrlHelperMixin</a></li><li><a href="module-net-NodeInstructionUrlHelperMixin.html">net~NodeInstructionUrlHelperMixin</a></li><li><a href="module-net-NodeMetadataUrlHelperMixin.html">net~NodeMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeUrlHelperMixin.html">net~NodeUrlHelperMixin</a></li><li><a href="module-net-QueryUrlHelperMixin.html">net~QueryUrlHelperMixin</a></li><li><a href="module-net-UserAuthTokenUrlHelperMixin.html">net~UserAuthTokenUrlHelperMixin</a></li><li><a href="module-net-UserDatumAuxiliaryUrlHelperMixin.html">net~UserDatumAuxiliaryUrlHelperMixin</a></li><li><a href="module-net-UserMetadataUrlHelperMixin.html">net~UserMetadataUrlHelperMixin</a></li><li><a href="module-net-UserUrlHelperMixin.html">net~UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Classes</h1>
+<section>
+
+<header>
+    
+        <h2>
+        
+        </h2>
+        
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Classes</h3>
+
+        <dl>
+            <dt><a href="Logger.html">Logger</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-Aggregation.html">Aggregation</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-AuthTokenStatus.html">AuthTokenStatus</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-AuthTokenType.html">AuthTokenType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-CombiningType.html">CombiningType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DatumAuxiliaryType.html">DatumAuxiliaryType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DatumFilter.html">DatumFilter</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DatumReadingType.html">DatumReadingType</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-DeviceOperatingState.html">DeviceOperatingState</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-GeneralMetadata.html">GeneralMetadata</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-InstructionState.html">InstructionState</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-Location.html">Location</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-LocationPrecision.html">LocationPrecision</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-Pagination.html">Pagination</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SecurityPolicy.html">SecurityPolicy</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SecurityPolicyBuilder.html">SecurityPolicyBuilder</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SkyCondition.html">SkyCondition</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-SortDescriptor.html">SortDescriptor</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-domain-UserMetadataFilter.html">UserMetadataFilter</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-AuthorizationV2Builder.html">AuthorizationV2Builder</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-Environment.html">Environment</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-HttpHeaders.html">HttpHeaders</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-LocationDatumMetadataUrlHelper.html">LocationDatumMetadataUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-LocationDatumUrlHelper.html">LocationDatumUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeDatumMetadataUrlHelper.html">NodeDatumMetadataUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeDatumUrlHelper.html">NodeDatumUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeInstructionUrlHelper.html">NodeInstructionUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeMetadataUrlHelper.html">NodeMetadataUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UrlHelper.html">UrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UserAuthTokenUrlHelper.html">UserAuthTokenUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UserDatumAuxiliaryUrlHelper.html">UserDatumAuxiliaryUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UserMetadataUrlHelper.html">UserMetadataUrlHelper</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-BitmaskEnum.html">BitmaskEnum</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-ComparableEnum.html">ComparableEnum</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-Configuration.html">Configuration</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-Enum.html">Enum</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-MultiMap.html">MultiMap</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-util-PropMap.html">PropMap</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Mixins</h3>
+
+        <dl>
+            <dt><a href="module-net-AuthTokenUrlHelperMixin.html">AuthTokenUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-LocationDatumMetadataUrlHelperMixin.html">LocationDatumMetadataUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-LocationDatumUrlHelperMixin.html">LocationDatumUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-LocationUrlHelperMixin.html">LocationUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeDatumMetadataUrlHelperMixin.html">NodeDatumMetadataUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeDatumUrlHelperMixin.html">NodeDatumUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeInstructionUrlHelperMixin.html">NodeInstructionUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeMetadataUrlHelperMixin.html">NodeMetadataUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-NodeUrlHelperMixin.html">NodeUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-QueryUrlHelperMixin.html">QueryUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UserAuthTokenUrlHelperMixin.html">UserAuthTokenUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UserDatumAuxiliaryUrlHelperMixin.html">UserDatumAuxiliaryUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UserMetadataUrlHelperMixin.html">UserMetadataUrlHelperMixin</a></dt>
+            <dd></dd>
+        
+            <dt><a href="module-net-UserUrlHelperMixin.html">UserUrlHelperMixin</a></dt>
+            <dd></dd>
+        </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on 2020-04-20T16:14:46+12:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
