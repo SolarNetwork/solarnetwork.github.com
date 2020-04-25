@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>SolarNetwork Core Module: data</title>
+
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<link type="text/css" rel="stylesheet" href="styles/sunlight.default.css">
+
+	<link type="text/css" rel="stylesheet" href="styles/site.spacelab.css">
+
+</head>
+
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top ">
+<div class="container">
+	<div class="navbar-header">
+		<a class="navbar-brand" href="index.html">SolarNetwork Core</a>
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#topNavigation">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+        </button>
+	</div>
+	<div class="navbar-collapse collapse" id="topNavigation">
+		<ul class="nav navbar-nav">
+			
+			<li class="dropdown">
+				<a href="modules.list.html" class="dropdown-toggle" data-toggle="dropdown">Modules<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-data.html">data</a></li><li><a href="module-domain.html">domain</a></li><li><a href="module-format.html">format</a></li><li><a href="module-net.html">net</a></li><li><a href="module-util.html">util</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="classes.list.html" class="dropdown-toggle" data-toggle="dropdown">Classes<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="Logger.html">Logger</a></li><li><a href="module-domain-Aggregation.html">domain~Aggregation</a></li><li><a href="module-domain-AuthTokenStatus.html">domain~AuthTokenStatus</a></li><li><a href="module-domain-AuthTokenType.html">domain~AuthTokenType</a></li><li><a href="module-domain-CombiningType.html">domain~CombiningType</a></li><li><a href="module-domain-DatumAuxiliaryType.html">domain~DatumAuxiliaryType</a></li><li><a href="module-domain-DatumFilter.html">domain~DatumFilter</a></li><li><a href="module-domain-DatumReadingType.html">domain~DatumReadingType</a></li><li><a href="module-domain-DeviceOperatingState.html">domain~DeviceOperatingState</a></li><li><a href="module-domain-GeneralMetadata.html">domain~GeneralMetadata</a></li><li><a href="module-domain-InstructionState.html">domain~InstructionState</a></li><li><a href="module-domain-Location.html">domain~Location</a></li><li><a href="module-domain-LocationPrecision.html">domain~LocationPrecision</a></li><li><a href="module-domain-Pagination.html">domain~Pagination</a></li><li><a href="module-domain-SecurityPolicy.html">domain~SecurityPolicy</a></li><li><a href="module-domain-SecurityPolicyBuilder.html">domain~SecurityPolicyBuilder</a></li><li><a href="module-domain-SkyCondition.html">domain~SkyCondition</a></li><li><a href="module-domain-SortDescriptor.html">domain~SortDescriptor</a></li><li><a href="module-domain-UserMetadataFilter.html">domain~UserMetadataFilter</a></li><li><a href="module-net-AuthorizationV2Builder.html">net~AuthorizationV2Builder</a></li><li><a href="module-net-Environment.html">net~Environment</a></li><li><a href="module-net-HttpHeaders.html">net~HttpHeaders</a></li><li><a href="module-net-LocationDatumMetadataUrlHelper.html">net~LocationDatumMetadataUrlHelper</a></li><li><a href="module-net-LocationDatumUrlHelper.html">net~LocationDatumUrlHelper</a></li><li><a href="module-net-NodeDatumMetadataUrlHelper.html">net~NodeDatumMetadataUrlHelper</a></li><li><a href="module-net-NodeDatumUrlHelper.html">net~NodeDatumUrlHelper</a></li><li><a href="module-net-NodeInstructionUrlHelper.html">net~NodeInstructionUrlHelper</a></li><li><a href="module-net-NodeMetadataUrlHelper.html">net~NodeMetadataUrlHelper</a></li><li><a href="module-net-UrlHelper.html">net~UrlHelper</a></li><li><a href="module-net-UserAuthTokenUrlHelper.html">net~UserAuthTokenUrlHelper</a></li><li><a href="module-net-UserDatumAuxiliaryUrlHelper.html">net~UserDatumAuxiliaryUrlHelper</a></li><li><a href="module-net-UserMetadataUrlHelper.html">net~UserMetadataUrlHelper</a></li><li><a href="module-util-BitmaskEnum.html">util~BitmaskEnum</a></li><li><a href="module-util-ComparableEnum.html">util~ComparableEnum</a></li><li><a href="module-util-Configuration.html">util~Configuration</a></li><li><a href="module-util-Enum.html">util~Enum</a></li><li><a href="module-util-MultiMap.html">util~MultiMap</a></li><li><a href="module-util-PropMap.html">util~PropMap</a></li>
+				</ul>
+			</li>
+			
+			<li class="dropdown">
+				<a href="mixins.list.html" class="dropdown-toggle" data-toggle="dropdown">Mixins<b class="caret"></b></a>
+				<ul class="dropdown-menu ">
+					<li><a href="module-net-AuthTokenUrlHelperMixin.html">net~AuthTokenUrlHelperMixin</a></li><li><a href="module-net-LocationDatumMetadataUrlHelperMixin.html">net~LocationDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-LocationDatumUrlHelperMixin.html">net~LocationDatumUrlHelperMixin</a></li><li><a href="module-net-LocationUrlHelperMixin.html">net~LocationUrlHelperMixin</a></li><li><a href="module-net-NodeDatumMetadataUrlHelperMixin.html">net~NodeDatumMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeDatumUrlHelperMixin.html">net~NodeDatumUrlHelperMixin</a></li><li><a href="module-net-NodeInstructionUrlHelperMixin.html">net~NodeInstructionUrlHelperMixin</a></li><li><a href="module-net-NodeMetadataUrlHelperMixin.html">net~NodeMetadataUrlHelperMixin</a></li><li><a href="module-net-NodeUrlHelperMixin.html">net~NodeUrlHelperMixin</a></li><li><a href="module-net-QueryUrlHelperMixin.html">net~QueryUrlHelperMixin</a></li><li><a href="module-net-UserAuthTokenUrlHelperMixin.html">net~UserAuthTokenUrlHelperMixin</a></li><li><a href="module-net-UserDatumAuxiliaryUrlHelperMixin.html">net~UserDatumAuxiliaryUrlHelperMixin</a></li><li><a href="module-net-UserMetadataUrlHelperMixin.html">net~UserMetadataUrlHelperMixin</a></li><li><a href="module-net-UserUrlHelperMixin.html">net~UserUrlHelperMixin</a></li>
+				</ul>
+			</li>
+			
+		</ul>
+        
+            <div class="col-sm-3 col-md-3">
+                <form class="navbar-form" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search" name="q" id="search-input">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" id="search-submit"><i class="glyphicon glyphicon-search"></i></button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        
+	</div>
+
+</div>
+</div>
+
+
+<div class="container" id="toc-content">
+<div class="row">
+
+	
+	<div class="col-md-8">
+	
+		<div id="main">
+			
+
+	<h1 class="page-title">Module: data</h1>
+<section>
+
+<header>
+    
+</header>
+
+
+<article>
+    <div class="container-overview">
+    
+        
+
+        
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        <dl>
+            
+<hr>
+<dt>
+    <h4 class="name" id="~aggregateNestedDataLayers"><span class="type-signature">&lt;inner> </span>aggregateNestedDataLayers(layerData, resultKey, copyProperties, sumProperties, staticProperties)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Combine the layers resulting from a <code>d3.nest</code> operation into a single, aggregated
+layer.</p>
+<p>This can be used to combine all sources of a single data type, for example
+to show all &quot;power&quot; sources as a single layer of chart data. The resulting object
+has the same structure as the input <code>layerData</code> parameter, with just a
+single layer of data.</p>
+<p>For example:</p>
+<pre class="prettyprint source"><code>const layerData = [
+  { key : 'A', values : [{watts : 123, foo : 1}, {watts : 234, foo : 2}] },
+  { key : 'B', values : [{watts : 345, foo : 3}, {watts : 456, foo : 4}] }
+];
+
+const result = aggregateNestedDataLayers(layerData,
+    'A and B', ['foo'], ['watts'], {'combined' : true});
+</code></pre>
+<p>Then <code>result</code> would look like this:</p>
+<pre class="prettyprint source"><code>[
+  { key : 'A and B', values : [{watts : 468, foo : 1, combined : true},
+                               {watts : 690, foo : 2, combined : true}] }
+]
+</code></pre>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>layerData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array of objects with <code>key</code> and <code>values</code> properties, as returned from <code>d3.nest().entries()</code></p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The layer's key value.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The layer's value array.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>resultKey</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The <code>key</code> property to assign to the returned layer.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>copyProperties</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array of string property names to copy as-is from the <strong>first</strong> layer's data values.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sumProperties</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;string></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>An array of string property names to add together from <strong>all</strong> layer data.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>staticProperties</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Static properties to copy as-is to <strong>all</strong> output data values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>An array of objects with <code>key</code> and <code>value</code> properties, the same structure as the provided <code>layerData</code> argument</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;object></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~groupedBySourceMetricDataArray"><span class="type-signature">&lt;inner> </span>groupedBySourceMetricDataArray(data, metricName [, sourceIdMap] [, aggFn])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Transform raw SolarNetwork timeseries data by combining datum from multiple sources into a single
+data per time key.</p>
+<p>This method produces a single array of objects with metric properties derived by grouping
+that property within a single time slot across one or more source IDs. Conceptually this is
+similar to <a href="module-data.html#~aggregateNestedDataLayers">module:data~aggregateNestedDataLayers</a> except groups of source IDs can be
+produced in the final result.</p>
+<p>The data will be passed through <a href="module-data.html#~normalizeNestedStackDataByDate">module:data~normalizeNestedStackDataByDate</a> so that every
+result object will contain every configured output group, but missing data will result in a
+<code>null</code> value.</p>
+<p>Here's an example where two sources <code>A</code> and <code>B</code> are combined into a single group <code>Generation</code>
+and a third source <code>C</code> is passed through as another group <code>Consumption</code>:</p>
+<pre class="prettyprint source"><code>const queryData = [
+    {localDate: '2018-05-05', localTime: '11:00', sourceId: 'A', watts : 123},
+    {localDate: '2018-05-05', localTime: '11:00', sourceId: 'B', watts : 234},
+    {localDate: '2018-05-05', localTime: '11:00', sourceId: 'C', watts : 345},
+    {localDate: '2018-05-05', localTime: '12:00', sourceId: 'A', watts : 456},
+    {localDate: '2018-05-05', localTime: '12:00', sourceId: 'B', watts : 567},
+    {localDate: '2018-05-05', localTime: '12:00', sourceId: 'C', watts : 678},
+];
+const sourceMap = new Map([
+    ['A', 'Generation'],
+    ['B', 'Generation'],
+    ['C', 'Consumption'],
+]);
+
+const result = groupedBySourceMetricDataArray(queryData, 'watts', sourceMap);
+</code></pre>
+<p>Then <code>result</code> would look like this:</p>
+<pre class="prettyprint source"><code>[
+    {date : new Date('2018-05-05T11:00Z'), Generation : 357, Consumption: 345},
+    {date : new Date('2018-05-05T12:00Z'), Generation : 1023, Consumption: 678}
+]
+</code></pre>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the raw data returned from SolarNetwork</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>metricName</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the datum property name to extract</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>sourceIdMap</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Map</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an optional mapping of input source IDs to output source IDs; this can be used
+to control the grouping of data, by mapping multiple input source IDs to the same
+output source ID</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aggFn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">function</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>an optional aggregate function to apply to the metric values;
+defaults to <code>d3.sum</code>; <strong>note</strong> that the function will be passed an array of input
+data objects, not metric values</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+<div class="param-desc">
+    <p>array of datum objects, each with a date and one metric value per source ID</p>
+</div>
+
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">Array.&lt;object></span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~normalizeNestedStackDataByDate"><span class="type-signature">&lt;inner> </span>normalizeNestedStackDataByDate(layerData [, fillTemplate] [, fillFn])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Normalize the data arrays resulting from a <code>d3.nest</code> operation so that all group
+value arrays have the same number of elements, based on a Date property named
+<code>date</code>.</p>
+<p>The data values are assumed to be sorted by <code>date</code> already, and are modified in-place.
+This makes the data suitable to passing to <code>d3.stack</code>, which expects all stack data
+arrays to have the same number of values, for the same keys. When querying for data
+in SolarNetwork there might be gaps in the results, so this function can be used to
+&quot;fill in&quot; those gaps with &quot;dummy&quot; values so that there are no more gaps.</p>
+<p>Filled-in data objects are automatically populated with an appropriate <code>date</code> property
+and a <code>sourceId</code> property taken from the <code>key</code> of the layer the gap if found in. You
+can pass a <code>fillTemplate</code> object with static properties to also include on all filled-in
+data objects. You can also pass a <code>fillFn</code> function to populate the filled-in objects
+with dynamic data.</p>
+<p>For example, given:</p>
+<pre class="prettyprint source"><code>const layerData = [
+  { key : 'A', values : [{date : new Date('2011-12-02 12:00')}, {date : new Date('2011-12-02 12:10')}] },
+  { key : 'B', values : [{date : new Date('2011-12-02 12:00')}] }
+];
+
+normalizeNestedStackDataByDate(layerData);
+</code></pre>
+<p>The <code>layerData</code> would be modified in-place and look like this (notice the filled in second data value in the <strong>B</strong> group):</p>
+<pre class="prettyprint source"><code>[
+  { key : 'A', values : [{date : new Date('2011-12-02 12:00')}, {date : new Date('2011-12-02 12:10')}] },
+  { key : 'B', values : [{date : new Date('2011-12-02 12:00')}, {date : new Date('2011-12-02 12:10'), sourceId : 'B'}] }
+]
+</code></pre>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>layerData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An array of objects with <code>key</code> and <code>values</code> properties, as returned from <code>d3.nest().entries()</code></p>
+                <h6 class="method-params-label method-subparams-label">Properties</h6>
+                
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The layer's key value.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>values</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The layer's value array.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+            </td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fillTemplate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An object to use as a template for any filled-in data objects.
+The <code>date</code> property will be populated automatically, and a <code>sourceId</code>
+property will be populated by the layer's <code>key</code>.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>fillFn</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-data.html#~NestedDataOperatorFunction">module:data~NestedDataOperatorFunction</a></span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>An optional function to populate filled-in data objects with.
+This function is invoked <strong>after</strong> populating any <code>fillTemplate</code> values.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        
+            
+<hr>
+<dt>
+    <h4 class="name" id="~timeNormalizeDataArray"><span class="type-signature">&lt;inner> </span>timeNormalizeDataArray(data, aggregate)</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>Normalize a data array of time series data based on an aggregate time step.</p>
+<p>This method is useful for &quot;filling in&quot; gaps of data in situations where something expects
+the data include placeholders for the gaps. Charting applications often expect this, for
+example.</p>
+<p>Each element in the <code>data</code> array is expected to provide a <code>date</code> property that is a <code>Date</code>
+object. When gaps are discovered in the array, &quot;filler&quot; objects will be inserted with
+an approprate <code>date</code> value and all other properties copied from the previous element but
+set to <code>null</code>.</p>
+<p>Here's an example where a new element is added to an array to fill in a missing time slot:</p>
+<pre class="prettyprint source"><code>const queryData = [
+    {date : new Date('2018-05-05T11:00Z'), Generation : 357, Consumption: 345},
+    {date : new Date('2018-05-05T12:00Z'), Generation : 1023, Consumption: 678}
+]
+
+timeNormalizeDataArray(queryData, Aggregations.ThirtyMinute);
+</code></pre>
+<p>Then <code>queryData</code> would look like this:</p>
+<pre class="prettyprint source"><code>[
+    {date : new Date('2018-05-05T11:00Z'), Generation : 357, Consumption: 345},
+    {date : new Date('2018-05-05T11:30Z'), Generation : null, Consumption: null},
+    {date : new Date('2018-05-05T12:00Z'), Generation : 1023, Consumption: 678}
+]
+</code></pre>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Array.&lt;object></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the raw data returned from SolarNetwork; this array is modified in-place</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>aggregate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-domain-Aggregation.html">module:domain~Aggregation</a></span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>the expected aggregate level of the data</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+        </dl>
+    
+
+    
+        <h3 class="subsection-title">Type Definitions</h3>
+
+        <dl>
+                
+<hr>
+<dt>
+    <h4 class="name" id="~NestedDataOperatorFunction"><span class="type-signature"></span>NestedDataOperatorFunction(datum, key [, prevDatum])</h4>
+    
+    
+</dt>
+<dd>
+
+    
+    <div class="description">
+        <p>A callback function that operates on a nested data layer datum object.</p>
+    </div>
+    
+
+    
+
+    
+
+    
+    
+        <h5>Parameters:</h5>
+        
+
+<table class="params table table-striped">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+        <th>Argument</th>
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>datum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the datum object being operated on</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>key</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">string</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the layer key the datum object is a member of</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>prevDatum</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">object</span>
+
+
+
+            
+            </td>
+
+            
+                <td class="attributes">
+                
+                    &lt;optional><br>
+                
+
+                
+
+                
+                </td>
+            
+
+            
+
+            <td class="description last"><p>the previous datum object in the layer, if available</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+    
+
+    
+<dl class="details">
+    
+
+	
+
+	
+
+	
+
+    
+
+    
+
+    
+
+    
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+	
+
+	
+
+	
+
+	
+</dl>
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <h5>Returns:</h5>
+    
+            
+
+
+<dl>
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">void</span>
+
+
+
+    </dd>
+</dl>
+
+
+        
+
+    
+</dd>
+
+            </dl>
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+
+	
+		<div class="col-md-3">
+			<div id="toc" class="col-md-3 hidden-xs hidden-sm hidden-md"></div>
+		</div>
+	
+
+</div>
+</div>
+
+
+    <div class="modal fade" id="searchResults">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">Search results</h4>
+          </div>
+          <div class="modal-body"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div>
+
+
+<footer>
+
+
+<span class="jsdoc-message">
+	Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a>
+	
+		on 2020-04-25T12:03:05+12:00
+	
+	using the <a href="https://github.com/docstrap/docstrap">DocStrap template</a>.
+</span>
+</footer>
+
+<script src="scripts/docstrap.lib.js"></script>
+<script src="scripts/toc.js"></script>
+
+    <script type="text/javascript" src="scripts/fulltext-search-ui.js"></script>
+
+
+<script>
+$( function () {
+	$( "[id*='$']" ).each( function () {
+		var $this = $( this );
+
+		$this.attr( "id", $this.attr( "id" ).replace( "$", "__" ) );
+	} );
+
+	$( ".tutorial-section pre, .readme-section pre, pre.prettyprint.source" ).each( function () {
+		var $this = $( this );
+
+		var example = $this.find( "code" );
+		exampleText = example.html();
+		var lang = /{@lang (.*?)}/.exec( exampleText );
+		if ( lang && lang[1] ) {
+			exampleText = exampleText.replace( lang[0], "" );
+			example.html( exampleText );
+			lang = lang[1];
+		} else {
+			var langClassMatch = example.parent()[0].className.match(/lang\-(\S+)/);
+			lang = langClassMatch ? langClassMatch[1] : "javascript";
+		}
+
+		if ( lang ) {
+
+			$this
+			.addClass( "sunlight-highlight-" + lang )
+			.addClass( "linenums" )
+			.html( example.html() );
+
+		}
+	} );
+
+	Sunlight.highlightAll( {
+		lineNumbers : true,
+		showMenu : true,
+		enableDoclinks : true
+	} );
+
+	$.catchAnchorLinks( {
+        navbarOffset: 10
+	} );
+	$( "#toc" ).toc( {
+		anchorName  : function ( i, heading, prefix ) {
+			return $( heading ).attr( "id" ) || ( prefix + i );
+		},
+		selectors   : "#toc-content h1,#toc-content h2,#toc-content h3,#toc-content h4",
+		showAndHide : false,
+		smoothScrolling: true
+	} );
+
+	$( "#main span[id^='toc']" ).addClass( "toc-shim" );
+	$( '.dropdown-toggle' ).dropdown();
+
+    $( "table" ).each( function () {
+      var $this = $( this );
+      $this.addClass('table');
+    } );
+
+} );
+</script>
+
+
+
+<!--Navigation and Symbol Display-->
+
+
+<!--Google Analytics-->
+
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            SearcherDisplay.init();
+        });
+    </script>
+
+
+</body>
+</html>
