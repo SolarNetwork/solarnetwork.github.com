@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MQTT stream datum
-tags: dev, database
+tags: dev
 ---
 
 The [previous post]({% post_url /news/2021-05-04-mqtt5 %}) talked about some efficiency gains
