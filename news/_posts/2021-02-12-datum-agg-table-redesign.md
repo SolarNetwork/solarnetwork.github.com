@@ -165,7 +165,7 @@ The forth problem of the duplicate date column is solved by dropping the local d
 and relying on joining to the `da_datm_meta.time_zone` stream metadata column to translate the
 timestamp values into node-local dates.
 
-The firth problem of the "last seen" status property values is solved by calculating the "most seen"
+The fifth problem of the "last seen" status property values is solved by calculating the "most seen"
 value instead.
 
 Overall, this change _significantly_ reduced the size of the datum aggregate tables in SolarNetwork,
