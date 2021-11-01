@@ -99,17 +99,17 @@ The expression settings that go along with this are:
 
 | Setting | Value | Description |
 |:--------|:------|:------------|
-| Property | `binTip_s` | Must match the input property we want to apply the expression to. |
+| Property | `binTip_a` | Must match the output property we want to apply the expression to. |
 | Property Type | `Accumulating` | Must be accumulating for the meter output value. |
 | Expression | See below for details. |
 
 ### Cycle counting virtual meter expression
 
 The expression used to calculate the `binTip_a` accumulating property is designed to deal with input
-readings of 0 or 1, where the desire is to count the number of toggles from `0 → 1 → 0` that take more
-than 5s to complete. The expression relies on the **Track Only On Change** setting to be
-active. That means the `prevInput` value is always the last _changed_ input value, not necessarily the
-previously _seen_ input value!
+readings of `0` or `1`, where the desire is to count the number of toggles from `0 → 1 → 0` that
+take more than 5s to complete. The expression relies on the **Track Only On Change** setting to be
+active. That means the `prevInput` value is always the last _changed_ input value, not necessarily
+the previously _seen_ input value!
 
 To help deal with various edge cases where SolarNode might start up or shut down in the middle of a
 cycle, the idea of _partially_ advancing the meter a fractional amount is used, with rounding then
