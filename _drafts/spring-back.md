@@ -41,16 +41,27 @@ the opportunity to update the applications to use more modern toolkits. For exam
 | SolarNet 1.0 | SolarNet 2.0 | Description |
 |:-------------|:-------------|:------------|
 | Java 6       | Java 11 | The Java runtime used |
-| Joda Time    | `java.time` (Java 8 Time) | Date/time parsing |
+| Joda Time    | `java.time` (Java 8 Time)<sup>†</sup> | Date/time parsing and formatting |
 | Spring 4.3   | Spring 5.3 | Uber Java support framework |
+| MyBatis 3.5  | Spring JDBC<sup>‡</sup> | SQL database integration |
+| JSP 2.1      | Thymeleaf 3.0<sup>*</sup> | HTML rendering |
+| Ant + Ivy    | Gradle | Build framework |
 | Virgo 3.7    | Spring Boot 2.6 | Application configuration and deployment |
-| JSP 2.1      | Thymeleaf 3.0 | HTML rendering |
-| MyBatis 3.5  | Spring JDBC<sup>†</sup> | SQL database integration |
-| Any + Ivy    | Gradle | Build framework |
 
 It was a big undertaking, but now SolarNet is much more aligned with modern Java development
 practices and will be much easier to maintain, and evolve, going forward.
 
 🎉 
 
-<sup>†</sup> MyBatis is still used, but is being phased out over time.
+<sup>†</sup> Switching date libraries sounds trivial, but turns out to be one of the more
+complicated changes to pull off. Dates are central to most of the data SolarNetwork processes, so
+this touched nearly every corner of the code, making the effort to port everything was quite large.
+On top of that, there were many cases where the handling of dates differed between the libraries,
+resulting in different behaviour that needed to be addressed to avoid breaking/incompatible changes
+in the SolarNetwork API.
+
+<sup>‡</sup> MyBatis is still used, but is being phased out over time.
+
+<sup>*</sup> Switching HTML rendering from JSP to Thymeleaf was another large change, mostly 
+affecting the SolarUser application. Thankfully this area is more forgiving to change than the 
+date library switch, so was not as hard to work through.
