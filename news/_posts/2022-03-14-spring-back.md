@@ -6,8 +6,8 @@ category: news
 ---
 ## Some Perspective
 
-SolarNetwork has been around for a wee while at this point. When we started around **2006** when
-**Java 6** had just been released, as had **Spring Framework 2**. As with many software projects,
+SolarNetwork has been around for a wee while at this point. We started around **2006** when **Java
+6** had just been released, as had **Spring Framework 2**. As with many software projects,
 SolarNetwork started out pretty small in scope. Both the server-side SolarNet application and the
 distributed SolarNode application were fairly simple Java + Spring applications. Another Java
 technology was being enthusiastically embraced by many (including the Spring developers): **OSGi**.
@@ -55,8 +55,8 @@ practices and will be much easier to maintain, and evolve, going forward.
 
 <sup>†</sup> Switching date libraries sounds trivial, but turns out to be one of the more
 complicated changes to pull off. Dates are central to most of the data SolarNetwork processes, so
-this touched nearly every corner of the code, making the effort to port everything was quite large.
-On top of that, there were many cases where the handling of dates differed between the libraries,
+this touched nearly every corner of the code, making the effort to port everything quite large. On
+top of that, there were many cases where the handling of dates differed between the libraries,
 resulting in different behaviour that needed to be addressed to avoid breaking/incompatible changes
 in the SolarNetwork API.
 
