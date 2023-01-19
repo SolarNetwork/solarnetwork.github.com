@@ -23,6 +23,6 @@ published by any nodes you have authorization to.
 
 [api-docs]: https://github.com/SolarNetwork/solarnetwork/wiki/SolarFlux-API
 [mqtt]: http://mqtt.org/
-[solarflux-demo]: https://data.solarnetwork.net/dev/flux/
+[solarflux-demo]: https://go.solarnetwork.net/dev/flux/
 [solarflux-upload]: https://github.com/SolarNetwork/solarnetwork-node/tree/master/net.solarnetwork.node.upload.flux
 [websocket]: https://en.wikipedia.org/wiki/WebSocket
