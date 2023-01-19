@@ -18,7 +18,7 @@ and [report any issues][jira] you find.
 
 [changelog]: https://github.com/SolarNetwork/solarnode-os-images/blob/master/debian/pi/CHANGELOG.md
 [download]: https://sourceforge.net/projects/solarnetwork/files/solarnode/pi/
-[jira]: https://data.solarnetwork.net/jira/
+[jira]: https://dev.solarnetwork.net/jira/
 [nim]: https://data.solarnetwork.net/nim/
 [readme]: https://github.com/SolarNetwork/solarnode-os-images/tree/master/debian/pi#solarnode-raspberry-pi-images
 [repo]: https://debian.repo.solarnetwork.org.nz
