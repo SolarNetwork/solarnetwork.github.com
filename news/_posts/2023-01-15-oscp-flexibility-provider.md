@@ -4,10 +4,10 @@ title: OSCP Flexibility Provider
 tags: oscp, ocpp, solarnet
 category: news
 ---
-SolarNetwork has added an [OSCP][oscp] 2.0 [Flexibility Provider service][solarnet-oscp], to support
-demand-response forecast signals from electric grid operators. The OSCP Flexibility Provider service
-allows grid operators to send detailed grid constraint forecasts to SolarNetwork. These forecasts
-contain information like:
+SolarNetwork has added an [Open Smart Charging Protocol][oscp] 2.0 [Flexibility Provider
+service][solarnet-oscp], to support demand-response forecast signals from electric grid operators.
+The OSCP Flexibility Provider service allows grid operators to send detailed grid constraint
+forecasts to SolarNetwork. These forecasts contain information like:
 
 > between 13:00 - 13:15 use no more than 50 kW of total power at grid connection point ABC
 
