@@ -70,6 +70,10 @@ a.button:active {
   text-decoration: none;
 }
 
+.nav a:hover {
+  text-decoration: none !important;
+}
+
 .wrapper {
   width:860px;
   margin:0 auto;
