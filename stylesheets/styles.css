@@ -46,11 +46,28 @@ a {
   text-decoration:none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 a small {
   font-size:11px;
   color:#777;
   margin-top:-0.6em;
   display:block;
+}
+
+a.button {
+  border-radius: 4px;
+  border: 1px solid rgb(168, 198, 213);
+  padding: 6px 8px;
+  background-color: white;
+}
+
+a.button:hover,
+a.button:active {
+	background-color: rgb(212, 234, 245);
+  text-decoration: none;
 }
 
 .wrapper {
