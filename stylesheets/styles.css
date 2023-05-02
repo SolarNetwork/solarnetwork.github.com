@@ -37,13 +37,13 @@ h2 {
 }
 
 h3, h4, h5, h6 {
-  color:#494949;
+  color: #494949;
 }
 
 a {
-  color:#39c;
-  font-weight:400;
-  text-decoration:none;
+  color: #39c;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 a:hover {
@@ -58,16 +58,21 @@ a small {
 }
 
 a.button {
+  display: inline-block;
   border-radius: 4px;
-  border: 1px solid rgb(168, 198, 213);
+  border: 1px solid #39c;
   padding: 6px 8px;
-  background-color: white;
+  margin: 1em 0;
+  color: white;
+  font-weight: 500;
+  background-color: #3399ccb0;
 }
 
 a.button:hover,
 a.button:active {
-	background-color: rgb(212, 234, 245);
+  background-color: rgb(212, 234, 245);
   text-decoration: none;
+  color: #666;
 }
 
 .nav a:hover {
@@ -222,17 +227,17 @@ section.nav {
 }
 
 section.nav ul {
-	display: table;
-	list-style:none;
-	padding:0;
+  display: table;
+  list-style:none;
+  padding:0;
 }
 
 section.nav li {
-	display: block;
-	font-weight: 600;
-	font-size: 14px;
-	margin: 0 10px 0 0;
-	float: left;
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 10px 0 0;
+  float: left;
 }
 
 section.nav li a {
@@ -242,8 +247,8 @@ section.nav li a {
 }
 
 section.nav li.active a {
-	font-weight: 600;
-	color: #666;
+  font-weight: 600;
+  color: #666;
 }
 
 section.nav li.active a,
@@ -256,8 +261,20 @@ section > img {
 }
 
 img.leadin {
-	float: left;
-	margin: 0.5em 1em 0.5em 0;
+  float: left;
+  margin: 0.5em 1em 0.5em 0;
+}
+
+.note {
+  padding: 0.5em 1em;
+  margin: 1em 0;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+  border: 1px solid #cdcdcd;
+}
+
+.note::before {
+  content: '🔥';
 }
 
 /* ===================== */
@@ -287,7 +304,7 @@ img.leadin {
   }
   
   section.nav + section {
-  	padding-top: 0;
+    padding-top: 0;
     border-top: 0;
   }
   
@@ -326,7 +343,7 @@ img.leadin {
   }
   
   header {
-  	margin-top: 0;
+    margin-top: 0;
   }
   
   header ul {
@@ -341,10 +358,10 @@ img.leadin {
     color:#444;
   }
   header {
-  	margin-top: 0;
-  	margin-bottom: 0.25in;
+    margin-top: 0;
+    margin-bottom: 0.25in;
   }
   section.nav {
-  	display: none;
+    display: none;
   }
 }
