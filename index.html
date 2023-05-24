@@ -4,91 +4,72 @@ layout: main
 nav-selection: home
 ---
 <section>
-	<h1>Energy information, for the rest of us.</h1>
+	<h1>We've moved!</h1>
 
-	<p>SolarNetwork is a framework for collecting and viewing information about
-	your personal or commercial energy production and consumption. Some applications of this
-	technology are:</p>
+	<p>Most of this site has moved to <a href="https://solarnetwork.net/">solarnetwork.net</a>.
+		Some links to API documentation remain below.</p>
 
+	<p>If you're interested in viewing, tinkering with, or contributing
+	to the code powering the SolarNetwork project, we welcome you. You can download all
+	the source code from <a href="https://github.com/SolarNetwork">GitHub</a>. See the
+	<a href="https://github.com/SolarNetwork/solarnetwork/wiki/Developer-Guide">Developer
+	Guide</a> wiki page for information on getting started.</p>
+	
+	<a class="button" href="https://join.slack.com/t/solarnetwork-f8n/shared_invite/zt-1qhses7cw-FhwcUlSiYh~3KYIDouOH4w" target="_blank">
+		Chat about SolarNetwork on Slack
+	</a>
+	
+	<div class="note">
+		We are working hard on a new <a
+		href="https://solarnetwork.github.io/solarnode-handbook/">SolarNode Handbook</a>,
+		packed full of helpful information on how to get starting using SolarNode. It is an ongoing
+		effort, but check it out for the most up-to-date information.
+	</div>
+
+</section>
+<section>
+	<h2>SolarNetwork API SDK - JavaScript</h2>
+
+	<p>The following are links to the JSDoc documentation available with the
+	SolarNetwork SDK JavaScript packages published to NPM.</p>
+
+	<h3>API - Core</h3>
+	<p>The core SolarNetwork API.</p>
 	<ul>
-		<li>See how much energy you consume over time.</li>
-		<li>Find patterns in the ways you use energy, and then find ways to minimize your energy footprint.</li>
-		<li>Track how much energy your solar panels produce over time.</li>
-		<li>Compare your energy use (or production) to other people.</li>
+		<li><a href="docs/api/js/solarnetwork-api-core/1.0.0/">1.0.0</a></li>
 	</ul>
 
-	<p>SolarNetwork is also a framework for participating in "smart grid" electricity networks.
-	Some applications of this technology are:</p>
-
+	<h3>API - NIM</h3>
+	<p>The SolarNode Image Maker API, used to produce customized SolarNode OS images.</p>
 	<ul>
-		<li>Demand response &mdash; automatically adjust your electricity consumption in
-		response to grid operator requests (and get reimbursed for doing so).</li>
-
-		<li>Market based pricing &mdash; pay for electricity when you use it (and
-		intelligently adapt to using electricity when the price is lowest).</li>
-
-		<li>Manage EV charging stations with RFID authorization and real-time usage tracking.</li>
+		<li><a href="docs/api/js/solarnetwork-api-nim/1.0.0/">1.0.0</a></li>
 	</ul>
 
-	<p><strong>Note</strong> that although SolarNetwork has focused heavily on
-	<em>electric</em> energy, the platform has been designed with other systems
-	in mind, such as water and natural gas.</p>
+	<h3>API - SSH</h3>
+	<p>Remote control for SolarNode devices.</p>
+	<ul>
+		<li><a href="docs/api/js/solarnetwork-api-ssh/0.2.2/">0.2.2</a></li>
+	</ul>
 
-</section>
-<section>
-	<h2>How it works</h2>
+	<h3>Control Toggler</h3>
+	<p>Helper for toggling a switch-like control connected to a SolarNode.
+	An example app that demonstrates using these features
+	<a href="https://go.solarnetwork.net/dev/control-toggle/">is available</a>.</p>
+	<ul>
+		<li><a href="docs/api/js/solarnetwork-control-toggler/0.2.0/">0.2</a></li>
+	</ul>
 
-	<p>SolarNetwork is composed of two parts: a small internet-connected device that
-	you install at home (we like to call them <em>SolarNodes</em>, or <em>nodes</em> for short),
-	and a service "in the cloud" that the devices communicate with (we call this service
-	<em>SolarNet</em>).</p>
+	<h3>Datum Loader</h3>
+	<p>Helpers for downloading data from SolarNetwork, including large data ranges.
+	An example app that demonstrates using these features
+	<a href="https://go.solarnetwork.net/dev/datum-loader/">is available</a>.</p>
+	<ul>
+		<li><a href="docs/api/js/solarnetwork-datum-loader/0.10.0/">0.10</a></li>
+	</ul>
 
-	<img alt="node-net-960" src="images/node-net-960.png" width="480" height="232" />
-
-	<p>Thus, the general idea is that you get your hands on a node,
-	configure it to communicate with your electricity meter, your solar inverter,
-	your battery charge controller, your weather station, etc, and let the node collect
-	interesting information from those devices and store it in the SolarNet service. From
-	there you have access to pre-built web pages to visualize your energy footprint,
-	compare your footprint to other users, and look for ways to maximize your energy efficiency.</p>
-
-	<p>The SolarNet service also provides an easy API for developers or advanced enthusiasts
-	 to build your own applications using the collected data.</p>
-
-</section>
-<section>
-	<h2>What you see</h2>
-
-	<p>As a participant in SolarNetwork what you will ultimately <em>see</em> are
-	interesting visualizations of all the data collected by your SolarNode. Perhaps
-	you'd like to see the electricity consumption of
-	a building <a href="https://data.solarnetwork.net/cm/cm.html?nodeId=205&sourceIds=HotWater,Lighting,House">broken down
-	by individual circuits</a>:</p>
-
-	<a href="https://data.solarnetwork.net/cm/cm.html?nodeId=205&sourceIds=HotWater,Lighting,House" title="SolarNetwork electricity consumption monitor">
-		<img src="images/cm-1000.png" alt="cm-1000" width="500" height="364"
-			alt="SolarNetwork electricity consumption monitor"/></a>
-
-	<p>Or just the overall consumption for a
-	<a href="http://data.solarnetwork.net/cm/cm.html?nodeId=11">whole house</a>.
-	If you've got solar panels as well, you might like to focus solely on
-	<a href="http://data.solarnetwork.net/tau/tau.html">solar panel performance</a>, or
-	convey your solar panel energy production in terms of
-	<a href="http://data.solarnetwork.net/ck/opm/opm.html">CO<sub>2</sub>, diesel, and
-	money saved</a>.</p>
-
-	<p>There are many possibilities, and these examples were all built using the SolarNet web API, using HTML5
-	technologies so they work in most any modern web browser. If you'd like to see
-	your energy information in some other way, it is entirely possible!</p>
-
-
-</section>
-
-
-<section>
-	<h2>Open to the core</h2>
-
-	<p>SolarNetwork is built entirely as open source software. We are passionate about
-	open source in general, but believe even more strongly that the software interacting
-	with your home and your energy network should be completely transparent.</p>
+	<h3>Test Utils</h3>
+	<p>Utilities for helping write unit tests with the SolarNetwork SDK.</p>
+	<ul>
+		<li><a href="docs/api/js/solarnetwork-test-utils/0.2.0/">0.2</a></li>
+	</ul>
 </section>

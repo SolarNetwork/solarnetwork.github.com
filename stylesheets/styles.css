@@ -256,6 +256,10 @@ section.nav li a:hover {
   border-bottom: 2px solid #f7c819;
 }
 
+header + section {
+	margin-top: 40px;
+}
+
 section > img {
   margin: 0 0 14px;
 }
